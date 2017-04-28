@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>主题配置 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="主题配置" />
+  
+  
+  
+  
+  <meta name="description" content="describe _config.yml（theme）">
+<meta name="keywords" content="主题配置">
+<meta property="og:type" content="article">
+<meta property="og:title" content="主题配置">
+<meta property="og:url" content="https://niniyang.github.io/2017/04/28/config-yml-theme-zh/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="describe _config.yml（theme）">
+<meta property="og:updated_time" content="2017-04-28T07:26:55.575Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="主题配置">
+<meta name="twitter:description" content="describe _config.yml（theme）">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/cute.jpg">
+  <link rel="apple-touch-icon" href="/css/images/cute.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/cute.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="[categories]-config-yml-theme-zh" style="width: 75%; float:left;" class="article article-type-[categories]" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      主题配置
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/04/28/config-yml-theme-zh/" class="article-date">
+	  <time datetime="2017-04-28T08:17:16.000Z" itemprop="datePublished">2017-04-28</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="describe-config-yml（theme）"><a href="#describe-config-yml（theme）" class="headerlink" title="describe _config.yml（theme）"></a>describe _config.yml（theme）</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div></pre></td><td class="code"><pre><div class="line"><span class="comment">##### Menu</span></div><div class="line">menu:</div><div class="line">  首页: /</div><div class="line">  归档: /archives</div><div class="line">  标签: /tags</div><div class="line">  分类: /categories</div><div class="line"><span class="comment">## you can create `tags` and `categories` folders in `../source`.</span></div><div class="line"><span class="comment">## And create a `index.md` file in each of them.</span></div><div class="line"><span class="comment">## set `front-matter`as</span></div><div class="line"><span class="comment">## layout: tags (or categories)</span></div><div class="line"><span class="comment">## title: tags (or categories)</span></div><div class="line"><span class="comment">## ---</span></div><div class="line"></div><div class="line"><span class="comment">#### Widgets</span></div><div class="line">widgets: </div><div class="line">- github-card</div><div class="line">- category</div><div class="line">- tag</div><div class="line">- archive</div><div class="line">- tagcloud</div><div class="line">- rss</div><div class="line">  <span class="comment">## provide eight widgets:github-card,category,tag,rss,archive,tagcloud,links,weibo</span></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#### RSS </span></div><div class="line">rss: /atom.xml <span class="comment">## RSS address.</span></div><div class="line"></div><div class="line"><span class="comment">#### Image</span></div><div class="line">imglogo:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span>             <span class="comment">## display image logo true/false.</span></div><div class="line">  src: img/logo.png        <span class="comment">## `.svg` and `.png` are recommended,please put image into the theme folder `/jacman/source/img`.</span></div><div class="line">favicon: img/favicon.ico   <span class="comment">## size:32px*32px,`.ico` is recommended,please put image into the theme folder `/jacman/source/img`.     </span></div><div class="line">apple_icon: img/jacman.jpg <span class="comment">## size:114px*114px,please put image into the theme folder `/jacman/source/img`.</span></div><div class="line">author_img: img/author.jpg <span class="comment">## size:220px*220px.display author avatar picture.if don't want to display,please don't set this.</span></div><div class="line">banner_img: <span class="comment">#img/banner.jpg ## size:1920px*200px+. Banner Picture</span></div><div class="line"><span class="comment">### Theme Color </span></div><div class="line">theme_color:</div><div class="line">    theme: <span class="string">'#2ca6cb'</span>    <span class="comment">##the defaut theme color is blue</span></div><div class="line"></div><div class="line"><span class="comment"># 代码高亮主题</span></div><div class="line"><span class="comment"># available: default | night</span></div><div class="line">highlight_theme: default</div><div class="line"></div><div class="line"><span class="comment">#### index post is expanding or not </span></div><div class="line">index:</div><div class="line">  expand: <span class="literal">true</span>           <span class="comment">## default is unexpanding,so you can only see the short description of each post.</span></div><div class="line">  excerpt_link: Read More  </div><div class="line"></div><div class="line">close_aside: <span class="literal">false</span>  <span class="comment">#close sidebar in post page if true</span></div><div class="line">mathjax: <span class="literal">false</span>      <span class="comment">#enable mathjax if true</span></div><div class="line"></div><div class="line"><span class="comment">### Creative Commons License Support, see http://creativecommons.org/ </span></div><div class="line"><span class="comment">### you can choose: by , by-nc , by-nc-nd , by-nc-sa , by-nd , by-sa , zero</span></div><div class="line">creative_commons: none</div><div class="line"></div><div class="line"><span class="comment">#### Author information</span></div><div class="line">author:</div><div class="line">  intro_line1:  <span class="string">"程序员上辈子都是折翼的天使"</span>    <span class="comment">## your introduction on the bottom of the page</span></div><div class="line">  intro_line2:  <span class="string">"This is my blog,Try to do better."</span>  <span class="comment">## the 2nd line</span></div><div class="line">  weibo:      <span class="comment">## e.g. wuchong1014 or 2176287895 for http://weibo.com/2176287895</span></div><div class="line">  weibo_verifier: b3593ceb    <span class="comment">## e.g. b3593ceb Your weibo-show widget verifier ,if you use weibo-show it is needed.</span></div><div class="line">  tsina:      <span class="comment">## e.g. 2176287895  Your weibo ID,It will be used in share button.</span></div><div class="line">  douban:     <span class="comment">## e.g. wuchong1014 or your id for https://www.douban.com/people/wuchong1014</span></div><div class="line">  zhihu:      <span class="comment">## e.g. jark  for http://www.zhihu.com/people/jark</span></div><div class="line">  email:      <span class="comment">## e.g. imjark@gmail.com</span></div><div class="line">  twitter:    <span class="comment">## e.g. jarkwu for https://twitter.com/jarkwu</span></div><div class="line">  github: tengj    <span class="comment">## e.g. wuchong for https://github.com/wuchong</span></div><div class="line">  facebook:   <span class="comment">## e.g. imjark for https://facebook.com/imjark</span></div><div class="line">  linkedin:   <span class="comment">## e.g. wuchong1014 for https://www.linkedin.com/in/wuchong1014</span></div><div class="line">  google_plus:    <span class="comment">## e.g. "111190881341800841449" for https://plus.google.com/u/0/111190881341800841449, the "" is needed!</span></div><div class="line">  stackoverflow:  <span class="comment">## e.g. 3222790 for http://stackoverflow.com/users/3222790/jark</span></div><div class="line"><span class="comment">## if you set them, the corresponding  share button will show on the footer</span></div><div class="line"></div><div class="line"><span class="comment">#### Toc</span></div><div class="line">toc:</div><div class="line">  article: <span class="literal">true</span>   <span class="comment">## show contents in article.</span></div><div class="line">  aside: <span class="literal">true</span>     <span class="comment">## show contents in aside.</span></div><div class="line"><span class="comment">## you can set both of the value to true of neither of them.</span></div><div class="line"><span class="comment">## if you don't want display contents in a specified post,you can modify `front-matter` and add `toc: false`.</span></div><div class="line"></div><div class="line"><span class="comment">#### Links</span></div><div class="line">links:</div><div class="line"><span class="comment">#### Comment</span></div><div class="line">duoshuo_shortname: 嘟嘟MD   <span class="comment">## e.g. wuchong   your duoshuo short name.</span></div><div class="line">disqus_shortname:    <span class="comment">## e.g. wuchong   your disqus short name.</span></div><div class="line"></div><div class="line"><span class="comment">#### Share button</span></div><div class="line">jiathis:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">false</span> <span class="comment">## if you use jiathis as your share tool,the built-in share tool won't be display.</span></div><div class="line">  id:    <span class="comment">## e.g. 1889330 your jiathis ID. </span></div><div class="line">  tsina: <span class="comment">## e.g. 2176287895 Your weibo id,It will be used in share button.</span></div><div class="line"></div><div class="line"><span class="comment">#### Analytics</span></div><div class="line">google_analytics:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></div><div class="line">  id:        <span class="comment">## e.g. UA-46321946-2 your google analytics ID.</span></div><div class="line">  site:      <span class="comment">## e.g. wuchong.me your google analytics site or set the value as auto.</span></div><div class="line"><span class="comment">## You MUST upgrade to Universal Analytics first!</span></div><div class="line"><span class="comment">## https://developers.google.com/analytics/devguides/collection/upgrade/?hl=zh_CN</span></div><div class="line">baidu_tongji:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">  sitecode: e6d1f421bbc9962127a50488f9ed37d1 <span class="comment">## e.g. e6d1f421bbc9962127a50488f9ed37d1 your baidu tongji site code</span></div><div class="line">cnzz_tongji:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></div><div class="line">  siteid:    <span class="comment">## e.g. 1253575964 your cnzz tongji site id</span></div><div class="line"></div><div class="line"><span class="comment">#### Miscellaneous</span></div><div class="line">ShowCustomFont: <span class="literal">true</span>  <span class="comment">## you can change custom font in `variable.styl` and `font.styl` which in the theme folder `/jacman/source/css`.</span></div><div class="line">fancybox: <span class="literal">true</span>        <span class="comment">## if you use gallery post or want use fancybox please set the value to true.</span></div><div class="line">totop: <span class="literal">true</span>           <span class="comment">## if you want to scroll to top in every post set the value to true</span></div><div class="line"></div><div class="line"></div><div class="line"><span class="comment">#### Custom Search</span></div><div class="line">google_cse: </div><div class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></div><div class="line">  cx:   <span class="comment">## e.g. 018294693190868310296:abnhpuysycw your Custom Search ID.</span></div><div class="line"><span class="comment">## https://www.google.com/cse/ </span></div><div class="line"><span class="comment">## To enable the custom search You must create a "search" folder in '/source' and a "index.md" file</span></div><div class="line"><span class="comment">## set the 'front-matter' as</span></div><div class="line"><span class="comment">## layout: search </span></div><div class="line"><span class="comment">## title: search</span></div><div class="line"><span class="comment">## ---</span></div><div class="line">baidu_search:     <span class="comment">## http://zn.baidu.com/</span></div><div class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></div><div class="line">  id:   <span class="comment">## e.g. "783281470518440642"  for your baidu search id</span></div><div class="line">  site: http://zhannei.baidu.com/cse/search  <span class="comment">## your can change to your site instead of the default site</span></div><div class="line">  </div><div class="line">tinysou_search:     <span class="comment">## http://tinysou.com/</span></div><div class="line">  <span class="built_in">enable</span>: <span class="literal">false</span></div><div class="line">  id:  <span class="comment">## e.g. "4ac092ad8d749fdc6293" for your tiny search id</span></div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2017/04/28/config-yml-theme-zh/" data-title="主题配置" data-url="https://niniyang.github.io/2017/04/28/config-yml-theme-zh/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"niniY"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/主题配置/">主题配置</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2017/04/28/test-again/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          test again
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#describe-config-yml（theme）"><span class="nav-number">1.</span> <span class="nav-text">describe _config.yml（theme）</span></a></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2017 Hexo All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				<span id="busuanzi_container_site_uv"> UV : <span id="busuanzi_value_site_uv"></span></span> |  
+				<span id="busuanzi_container_site_pv"> PV : <span id="busuanzi_value_site_pv"></span></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            Hexo
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 niniY All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

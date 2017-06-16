@@ -280,156 +280,6 @@ Global
 <!-- Table of Contents -->
 
   
-    <article id="post-firefox_config"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/05/11/firefox_config/">firefox config</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/05/11/firefox_config/" class="article-date">
-	  <time datetime="2017-05-11T05:39:47.000Z" itemprop="datePublished">2017-05-11</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/browsers/">browsers</a>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>火狐打开经常巨慢，网上收集了一些设置，确实快了很多，在火狐地址栏中输入：about:config进入配置：</p>
-<font face="微软雅黑" color="Salmon">1.限制页面快进/快退功能中保存的页面总数(默认值是-1表示无限页)</font>
-
-<p>在过滤器栏输入：browser.sessionhistory.max_total_viewers，双击该项，修改值为0。</p>
-        <!-- 火狐打开经常巨慢，网上收集了一些设置，确实快了很多，在火狐地址栏中输入：about:config进入配置：
-1.限制页面快进/快退功能中保存的页面总数(默认值是-1表示无限页)
-
-在过滤器栏输入：browser.sessionhistory.max_total_viewers，双击该项，修改值为0。
-
-2.让火狐在最小化时自动释放内存
-
-右击鼠标－新建－布尔（boolean)项，输入：con......  -->
-        <p class="article-more-link">
-          <a href="/2017/05/11/firefox_config/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefox/">firefox</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="post-导入SQL大文件超时"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/04/29/导入SQL大文件超时/">导入SQL大文件超时</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/04/29/导入SQL大文件超时/" class="article-date">
-	  <time datetime="2017-04-29T08:17:16.000Z" itemprop="datePublished">2017-04-29</time>
-	</a>
-
-      
-    <a class="article-category-link" href="/categories/database/">database</a>
-
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="sql文件太大，导入时报错如下："><a href="#sql文件太大，导入时报错如下：" class="headerlink" title=".sql文件太大，导入时报错如下："></a>.sql文件太大，导入时报错如下：</h3><font color="red">Error Code: 2006 - MySQL server has gone away.</font>
-
-<p>原因：配置文件中的max_allowed_packet不够大。</p>
-<p>解决：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 直接用SQL语句：</span></div><div class="line">SET GLOBAL  max_allowed_packet=67108864;</div></pre></td></tr></table></figure></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/database/">database</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
-    <article id="[layout]-hexo主题配置"  class="article article-type-[layout]" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2017/04/25/hexo主题配置/">Hexo theme config</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	<a href="/2017/04/25/hexo主题配置/" class="article-date">
-	  <time datetime="2017-04-25T03:33:22.000Z" itemprop="datePublished">2017-04-25</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>从GitHub上获取代码，在..\hexo\themes目录，Git Bash Here , and excute：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iTimeTraveler/hexo-theme-hiker.git themes/hiker</div></pre></td></tr></table></figure>
-<h3 id="改变主题"><a href="#改变主题" class="headerlink" title="改变主题"></a>改变主题</h3><p>把Hexo主目录下的 _config.yml 文件中的字段 theme 修改为 hiker.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: hiker</div></pre></td></tr></table></figure></p>
-        <!-- 安装主题从GitHub上获取代码，在..\hexo\themes目录，Git Bash Here , and excute：
-1$ git clone https://github.com/iTimeTraveler/hexo-theme-hiker.git themes/hiker
-改变主题把Hexo主目录下的 _config.yml 文件中的字段 theme 修改为 hiker.1the......  -->
-        <p class="article-more-link">
-          <a href="/2017/04/25/hexo主题配置/#more">Read More</a>
-        </p>
-      
-    </div>
-    <footer class="article-footer">
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-  
     <article id="post-xml,array转换"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
@@ -523,7 +373,7 @@ windows下
 <!-- Table of Contents -->
 
   
-    <article id="post-config-yml-theme-zh"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-firefox_config"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -531,7 +381,7 @@ windows下
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/2014/04/26/config-yml-theme-zh/">主题配置说明</a>
+      <a class="article-title" href="/2014/05/11/firefox_config/">firefox config</a>
     </h1>
   
 
@@ -539,28 +389,83 @@ windows下
     
     <div class="article-meta">
       
-	<a href="/2014/04/26/config-yml-theme-zh/" class="article-date">
-	  <time datetime="2014-04-26T08:17:16.000Z" itemprop="datePublished">2014-04-26</time>
+	<a href="/2014/05/11/firefox_config/" class="article-date">
+	  <time datetime="2014-05-11T05:39:47.000Z" itemprop="datePublished">2014-05-11</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/HEXO/">HEXO</a>
+    <a class="article-category-link" href="/categories/browsers/">browsers</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="describe-config-yml（theme）"><a href="#describe-config-yml（theme）" class="headerlink" title="describe _config.yml（theme）"></a>describe _config.yml（theme）</h3>
-        <!-- describe _config.yml（theme）
-1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889......  -->
+        <p>火狐打开经常巨慢，网上收集了一些设置，确实快了很多，在火狐地址栏中输入：about:config进入配置：</p>
+<font face="微软雅黑" color="Salmon">1.限制页面快进/快退功能中保存的页面总数(默认值是-1表示无限页)</font>
+
+<p>在过滤器栏输入：browser.sessionhistory.max_total_viewers，双击该项，修改值为0。</p>
+        <!-- 火狐打开经常巨慢，网上收集了一些设置，确实快了很多，在火狐地址栏中输入：about:config进入配置：
+1.限制页面快进/快退功能中保存的页面总数(默认值是-1表示无限页)
+
+在过滤器栏输入：browser.sessionhistory.max_total_viewers，双击该项，修改值为0。
+
+2.让火狐在最小化时自动释放内存
+
+右击鼠标－新建－布尔（boolean)项，输入：con......  -->
         <p class="article-more-link">
-          <a href="/2014/04/26/config-yml-theme-zh/#more">Read More</a>
+          <a href="/2014/05/11/firefox_config/#more">Read More</a>
         </p>
       
     </div>
     <footer class="article-footer">
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/主题配置说明/">主题配置说明</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefox/">firefox</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-导入SQL大文件超时"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2014/04/29/导入SQL大文件超时/">导入SQL大文件超时</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2014/04/29/导入SQL大文件超时/" class="article-date">
+	  <time datetime="2014-04-29T08:17:16.000Z" itemprop="datePublished">2014-04-29</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/database/">database</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="sql文件太大，导入时报错如下："><a href="#sql文件太大，导入时报错如下：" class="headerlink" title=".sql文件太大，导入时报错如下："></a>.sql文件太大，导入时报错如下：</h3><font color="red">Error Code: 2006 - MySQL server has gone away.</font>
+
+<p>原因：配置文件中的max_allowed_packet不够大。</p>
+<p>解决：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 直接用SQL语句：</span></div><div class="line">SET GLOBAL  max_allowed_packet=67108864;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/database/">database</a></li></ul>
 
     </footer>
   </div>
@@ -608,6 +513,103 @@ windows下
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置说明/">配置说明</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-config-yml-theme-zh"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2014/04/26/config-yml-theme-zh/">主题配置说明</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2014/04/26/config-yml-theme-zh/" class="article-date">
+	  <time datetime="2014-04-26T08:17:16.000Z" itemprop="datePublished">2014-04-26</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/HEXO/">HEXO</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="describe-config-yml（theme）"><a href="#describe-config-yml（theme）" class="headerlink" title="describe _config.yml（theme）"></a>describe _config.yml（theme）</h3>
+        <!-- describe _config.yml（theme）
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889......  -->
+        <p class="article-more-link">
+          <a href="/2014/04/26/config-yml-theme-zh/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/主题配置说明/">主题配置说明</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="[layout]-hexo主题配置"  class="article article-type-[layout]" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2014/04/25/hexo主题配置/">Hexo theme config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2014/04/25/hexo主题配置/" class="article-date">
+	  <time datetime="2014-04-25T03:33:22.000Z" itemprop="datePublished">2014-04-25</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/HEXO/">HEXO</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>从GitHub上获取代码，在..\hexo\themes目录，Git Bash Here , and excute：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iTimeTraveler/hexo-theme-hiker.git themes/hiker</div></pre></td></tr></table></figure>
+<h3 id="改变主题"><a href="#改变主题" class="headerlink" title="改变主题"></a>改变主题</h3><p>把Hexo主目录下的 _config.yml 文件中的字段 theme 修改为 hiker.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: hiker</div></pre></td></tr></table></figure></p>
+        <!-- 安装主题从GitHub上获取代码，在..\hexo\themes目录，Git Bash Here , and excute：
+1$ git clone https://github.com/iTimeTraveler/hexo-theme-hiker.git themes/hiker
+改变主题把Hexo主目录下的 _config.yml 文件中的字段 theme 修改为 hiker.1the......  -->
+        <p class="article-more-link">
+          <a href="/2014/04/25/hexo主题配置/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
 
     </footer>
   </div>

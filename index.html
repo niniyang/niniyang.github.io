@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>(ˇˍˇ) ～</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  
+  <meta name="description" content="noting...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="(ˇˍˇ) ～">
+<meta property="og:url" content="https://niniyang.github.io/index.html">
+<meta property="og:site_name" content="(ˇˍˇ) ～">
+<meta property="og:description" content="noting...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="(ˇˍˇ) ～">
+<meta name="twitter:description" content="noting...">
+  
+    <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/cute.jpg">
+  <link rel="apple-touch-icon" href="/css/images/cute.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/home.css" >
+  
+
+  
+
+  
+
+</head>
+
+
+
+  <body>
+
+
+  
+    <header id="header">
+
+  
+    <div id="intrologo" class="intro-logo" style="background-position:center; background-repeat:no-repeat; background-image: url(); background-size: auto 100%;">
+    <script>
+        var imgUrls = "css/images/poke.jpg,http://t.cn/RMbvEza".split(",");
+        var random = Math.floor((Math.random() * imgUrls.length ));
+        if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+          document.getElementById("intrologo").style.backgroundImage='url(' + imgUrls[random] + ')';
+        } else {
+          document.getElementById("intrologo").style.backgroundImage='url(/' + imgUrls[random] + ')';
+        }
+    </script>
+  
+
+    <canvas width="100%" height="100%"></canvas>
+    <script>
+      var c = document.getElementsByTagName('canvas')[0],
+          x = c.getContext('2d'),
+          w = window.innerWidth,
+          h = window.innerHeight,
+          pr = window.devicePixelRatio || 1,
+          f = 90,
+          q,
+          m = Math,
+          r = 0,
+          u = m.PI*2,
+          v = m.cos,
+          z = m.random
+      c.width = w*pr
+      c.height = h*pr
+      x.scale(pr, pr)
+      x.globalAlpha = 0.6
+
+      
+    </script>
+    
+
+    
+      <div id="homelogo" class="homelogo" style="background: rgba(255,255,255,1);"> 
+    
+
+        
+          <div class="homelogoback"  style="border: 1px solid #404040;" >
+            <h1><a href="#content" id="logo">(ˇˍˇ) ～</a></h1>
+            <h3>noting...</h3>
+            <h5>niniY</h5>
+            <!-- <p><a href="https://github.com/iTimeTraveler" target="_blank">Github</a></p> -->
+          </div>
+        
+    
+    </div>
+  </div>
+
+  <!-- 自适应主页背景大图 -->
+  
+    <script>
+        var img = new Image();
+        var intrologodiv = document.getElementById("intrologo");
+        img.src = intrologodiv.style.backgroundImage.replace('url(','').replace(')','').replace(/\"/gi, "");
+        img.onload=function(){
+          if (img.width / img.height <= document.body.clientWidth / document.body.clientHeight) {
+            intrologodiv.style.backgroundSize = "100% auto";
+          } else {
+            intrologodiv.style.backgroundSize = "auto 100%";
+          }
+        };
+    </script>
+ 
+
+ <!-- home_logo_image居中 -->
+ 
+    <script>
+        var homelogodiv = document.getElementById("homelogo");
+        if (document.all.homelogo.offsetWidth > document.body.clientWidth) {
+          homelogodiv.style.width = document.body.clientWidth + "px";
+          homelogodiv.style.marginLeft = document.body.clientWidth * -0.5 + "px";
+        } else {
+          homelogodiv.style.width = homelogodiv.clientWidth  + "px";
+          homelogodiv.style.marginLeft = (homelogodiv.clientWidth)  * -0.5 + "px";
+        }
+    </script>
+  
+
+  <div class="intro-navigate">
+      <p class="navigater-list">
+        
+          <a id="beautifont" class="main-nav-link" href="/">Home</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/archives">Archives</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/categories">Categories</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/tags">Tags</a>
+        
+          <a id="beautifont" class="main-nav-link" href="/about">About</a>
+        
+      </p>
+  </div>
+
+</header>
+  
+  <div id="container">
+    <div id="wrap">
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;">
+  
+    <article id="post-MySQL运行状态show status中文详解"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/06/05/MySQL运行状态show status中文详解/">MySQL运行状态show status中文详解</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/06/05/MySQL运行状态show status中文详解/" class="article-date">
+	  <time datetime="2017-06-05T06:45:47.000Z" itemprop="datePublished">2017-06-05</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/database/">database</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>要优化MySQL运行效率都少不了要运行show status查看各种状态，下面的这个表是参考官方文档及网上资料整理出来的show status中文详细解释，存档方便以后查阅。</p>
+        <!-- 要优化MySQL运行效率都少不了要运行show status查看各种状态，下面的这个表是参考官方文档及网上资料整理出来的show status中文详细解释，存档方便以后查阅。
+
+
+
+
+状态名
+作用域
+详细解释
+
+
+
+
+Aborted_clients
+Global
+由于客户端没有正确关闭连接导致客户端终止而中断的连接数
+
+
+Aborted_connects
+Global
+试图连接到MySQL服......  -->
+        <p class="article-more-link">
+          <a href="/2017/06/05/MySQL运行状态show status中文详解/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-MySQL sql文件导入导出"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/11/MySQL sql文件导入导出/">MySQL .sql文件导入导出</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/11/MySQL sql文件导入导出/" class="article-date">
+	  <time datetime="2017-05-11T06:14:47.000Z" itemprop="datePublished">2017-05-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/database/">database</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>经常要导入导出数据量庞大的数据，经常要超时！！！身为菜鸟心好累，ORZ…<br>于是冒着被嘲笑的那啥..从同事那里偷到了一点技艺..嗯~~~ (ˇˍˇ) ～</p>
+<p><font face="微软雅黑" color="Salmon">windows下</font><br>
+        <!-- 经常要导入导出数据量庞大的数据，经常要超时！！！身为菜鸟心好累，ORZ…于是冒着被嘲笑的那啥..从同事那里偷到了一点技艺..嗯~~~ (ˇˍˇ) ～
+windows下
+连接数据库12连接：mysql -h主机地址 -u用户名 －p用户密码 （注:u与root可以不用加空格，其它也一样） 断开：exit （回车）
+导入数据库123456常用source 命令进入mysql数据库控制台，如mys......  -->
+        <p class="article-more-link">
+          <a href="/2017/05/11/MySQL sql文件导入导出/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-Windows中cmd操作MySQL"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/11/Windows中cmd操作MySQL/">Windows中cmd操作mysql</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/11/Windows中cmd操作MySQL/" class="article-date">
+	  <time datetime="2017-05-11T06:10:47.000Z" itemprop="datePublished">2017-05-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/database/">database</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>打开CMD<br>将工作目录切换到MySQL的bin下<br>mysql -u root -p<br>输入密码即可登陆MySQL<br>问号可以查看帮助<br>首先需要选择操作的数据库use database_name<br>然后可以进行select等操作<br>需要注意的是，<font color="red">操作要记得分号结尾</font><br>如果忘记输入分号可以用\c来结束命令输入<br>常见的操作如下表</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a>
+        <!-- 打开CMD将工作目录切换到MySQL的bin下mysql -u root -p输入密码即可登陆MySQL问号可以查看帮助首先需要选择操作的数据库use database_name然后可以进行select等操作需要注意的是，操作要记得分号结尾如果忘记输入分号可以用\c来结束命令输入常见的操作如下表
+连接：mysql -h主机地址 -u用户名 －p用户密码 （注:u与root可以不用加空格，其它......  -->
+        <p class="article-more-link">
+          <a href="/2017/05/11/Windows中cmd操作MySQL/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-firefox_config"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/05/11/firefox_config/">firefox config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/05/11/firefox_config/" class="article-date">
+	  <time datetime="2017-05-11T05:39:47.000Z" itemprop="datePublished">2017-05-11</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/browsers/">browsers</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>火狐打开经常巨慢，网上收集了一些设置，确实快了很多，在火狐地址栏中输入：about:config进入配置：</p>
+<font face="微软雅黑" color="Salmon">1.限制页面快进/快退功能中保存的页面总数(默认值是-1表示无限页)</font>
+
+<p>在过滤器栏输入：browser.sessionhistory.max_total_viewers，双击该项，修改值为0。</p>
+        <!-- 火狐打开经常巨慢，网上收集了一些设置，确实快了很多，在火狐地址栏中输入：about:config进入配置：
+1.限制页面快进/快退功能中保存的页面总数(默认值是-1表示无限页)
+
+在过滤器栏输入：browser.sessionhistory.max_total_viewers，双击该项，修改值为0。
+
+2.让火狐在最小化时自动释放内存
+
+右击鼠标－新建－布尔（boolean)项，输入：con......  -->
+        <p class="article-more-link">
+          <a href="/2017/05/11/firefox_config/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/firefox/">firefox</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-导入SQL大文件超时"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/04/29/导入SQL大文件超时/">导入SQL大文件超时</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/04/29/导入SQL大文件超时/" class="article-date">
+	  <time datetime="2017-04-29T08:17:16.000Z" itemprop="datePublished">2017-04-29</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/database/">database</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="sql文件太大，导入时报错如下："><a href="#sql文件太大，导入时报错如下：" class="headerlink" title=".sql文件太大，导入时报错如下："></a>.sql文件太大，导入时报错如下：</h3><font color="red">Error Code: 2006 - MySQL server has gone away.</font>
+
+<p>原因：配置文件中的max_allowed_packet不够大。</p>
+<p>解决：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 直接用SQL语句：</span></div><div class="line">SET GLOBAL  max_allowed_packet=67108864;</div></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/database/">database</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-config-yml-theme-zh"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/04/26/config-yml-theme-zh/">主题配置说明</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/04/26/config-yml-theme-zh/" class="article-date">
+	  <time datetime="2017-04-26T08:17:16.000Z" itemprop="datePublished">2017-04-26</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/configs/">configs</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="describe-config-yml（theme）"><a href="#describe-config-yml（theme）" class="headerlink" title="describe _config.yml（theme）"></a>describe _config.yml（theme）</h3>
+        <!-- describe _config.yml（theme）
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374757677787980818283848586878889......  -->
+        <p class="article-more-link">
+          <a href="/2017/04/26/config-yml-theme-zh/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/主题配置说明/">主题配置说明</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-config-yml-zh"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/04/26/config-yml-zh/">配置说明</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/04/26/config-yml-zh/" class="article-date">
+	  <time datetime="2017-04-26T08:17:16.000Z" itemprop="datePublished">2017-04-26</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/configs/">configs</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="describe-config-yml"><a href="#describe-config-yml" class="headerlink" title="describe _config.yml"></a>describe _config.yml</h3>
+        <!-- describe _config.yml
+1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859606162636465666768697071727374# Hexo Configuration## Docs: https://......  -->
+        <p class="article-more-link">
+          <a href="/2017/04/26/config-yml-zh/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置说明/">配置说明</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="[layout]-hexo主题配置"  class="article article-type-[layout]" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/04/25/hexo主题配置/">Hexo theme config</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/04/25/hexo主题配置/" class="article-date">
+	  <time datetime="2017-04-25T03:33:22.000Z" itemprop="datePublished">2017-04-25</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3><p>从GitHub上获取代码，在..\hexo\themes目录，Git Bash Here , and excute：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/iTimeTraveler/hexo-theme-hiker.git themes/hiker</div></pre></td></tr></table></figure>
+<h3 id="改变主题"><a href="#改变主题" class="headerlink" title="改变主题"></a>改变主题</h3><p>把Hexo主目录下的 _config.yml 文件中的字段 theme 修改为 hiker.<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">theme: hiker</div></pre></td></tr></table></figure></p>
+        <!-- 安装主题从GitHub上获取代码，在..\hexo\themes目录，Git Bash Here , and excute：
+1$ git clone https://github.com/iTimeTraveler/hexo-theme-hiker.git themes/hiker
+改变主题把Hexo主目录下的 _config.yml 文件中的字段 theme 修改为 hiker.1the......  -->
+        <p class="article-more-link">
+          <a href="/2017/04/25/hexo主题配置/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+    <article id="post-hello-world"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/2017/04/24/hello-world/">Hello World</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2017/04/24/hello-world/" class="article-date">
+	  <time datetime="2017-04-24T03:33:22.000Z" itemprop="datePublished">2017-04-24</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+        <!-- Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
+Qu......  -->
+        <p class="article-more-link">
+          <a href="/2017/04/24/hello-world/#more">Read More</a>
+        </p>
+      
+    </div>
+    <footer class="article-footer">
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+  
+
+
+</section>
+        
+      </div>
+      
+        <div align="center" style="margin-top: 30px;"><hr class="hr" style="margin:0px; height:3px;"></div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2017 (ˇˍˇ) ～ All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				<span id="busuanzi_container_site_uv"> UV : <span id="busuanzi_value_site_uv"></span></span> |  
+				<span id="busuanzi_container_site_pv"> PV : <span id="busuanzi_value_site_pv"></span></span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+  <script src="/js/home.js"></script>
+
+
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            (ˇˍˇ) ～
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 niniY All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

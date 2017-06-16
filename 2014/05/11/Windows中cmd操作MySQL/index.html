@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xml,array的转换 | (ˇˍˇ) ～</title>
+  <title>windows中cmd操作mysql | (ˇˍˇ) ～</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="array" />
+  <meta name="keywords" content="MySQL" />
   
   
   
   
-  <meta name="description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
-<meta name="keywords" content="array">
+  <meta name="description" content="打开CMD将工作目录切换到MySQL的bin下mysql -u root -p输入密码即可登陆MySQL问号可以查看帮助首先需要选择操作的数据库use database_name然后可以进行select等操作需要注意的是，操作要记得分号结尾如果忘记输入分号可以用\c来结束命令输入常见的操作如下表">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="xml,array的转换">
-<meta property="og:url" content="https://niniyang.github.io/2014/07/11/xml,array转换/index.html">
+<meta property="og:title" content="Windows中cmd操作mysql">
+<meta property="og:url" content="https://niniyang.github.io/2014/05/11/Windows中cmd操作MySQL/index.html">
 <meta property="og:site_name" content="(ˇˍˇ) ～">
-<meta property="og:description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
-<meta property="og:updated_time" content="2017-06-16T08:38:41.253Z">
+<meta property="og:description" content="打开CMD将工作目录切换到MySQL的bin下mysql -u root -p输入密码即可登陆MySQL问号可以查看帮助首先需要选择操作的数据库use database_name然后可以进行select等操作需要注意的是，操作要记得分号结尾如果忘记输入分号可以用\c来结束命令输入常见的操作如下表">
+<meta property="og:updated_time" content="2017-06-16T08:47:17.650Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xml,array的转换">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
+<meta name="twitter:title" content="Windows中cmd操作mysql">
+<meta name="twitter:description" content="打开CMD将工作目录切换到MySQL的bin下mysql -u root -p输入密码即可登陆MySQL问号可以查看帮助首先需要选择操作的数据库use database_name然后可以进行select等操作需要注意的是，操作要记得分号结尾如果忘记输入分号可以用\c来结束命令输入常见的操作如下表">
   
     <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
   
@@ -151,7 +151,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-xml,array转换" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-Windows中cmd操作MySQL" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -159,7 +159,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      xml,array的转换
+      Windows中cmd操作mysql
     </h1>
   
 
@@ -167,17 +167,24 @@
     
     <div class="article-meta">
       
-	<a href="/2014/07/11/xml,array转换/" class="article-date">
-	  <time datetime="2014-07-11T06:14:47.000Z" itemprop="datePublished">2014-07-11</time>
+	<a href="/2014/05/11/Windows中cmd操作MySQL/" class="article-date">
+	  <time datetime="2014-05-11T06:10:47.000Z" itemprop="datePublished">2014-05-11</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/php/">php</a>
+    <a class="article-category-link" href="/categories/database/">database</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//xml转为array</div><div class="line">public <span class="keyword">function</span> xmlToArray(<span class="variable">$xml</span>)</div><div class="line">&#123;</div><div class="line">    <span class="variable">$xml</span>=simplexml_load_string(<span class="variable">$xml</span>, <span class="string">'SimpleXMLElement'</span>, LIBXML_NOCDATA);</div><div class="line">    <span class="variable">$array_data</span> = json_decode(json_encode(<span class="variable">$xml</span>), <span class="literal">true</span>);</div><div class="line">    <span class="built_in">return</span> <span class="variable">$array_data</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//array转xml</div><div class="line">public <span class="keyword">function</span> arrayToXml(<span class="variable">$arr</span>)</div><div class="line">&#123;</div><div class="line">    <span class="variable">$xml</span> = <span class="string">"&lt;xml&gt;"</span>;</div><div class="line">    foreach (<span class="variable">$arr</span> as <span class="variable">$key</span>=&gt;<span class="variable">$val</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (is_numeric(<span class="variable">$val</span>))</div><div class="line">        &#123;</div><div class="line">            <span class="variable">$xml</span>.=<span class="string">"&lt;"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>.<span class="variable">$val</span>.<span class="string">"&lt;/"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="variable">$xml</span>.=<span class="string">"&lt;"</span>.<span class="variable">$key</span>.<span class="string">"&gt;&lt;![CDATA["</span>.<span class="variable">$val</span>.<span class="string">"]]&gt;&lt;/"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="variable">$xml</span>.=<span class="string">"&lt;/xml&gt;"</span>;</div><div class="line">    <span class="built_in">return</span> <span class="variable">$xml</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>打开CMD<br>将工作目录切换到MySQL的bin下<br>mysql -u root -p<br>输入密码即可登陆MySQL<br>问号可以查看帮助<br>首先需要选择操作的数据库use database_name<br>然后可以进行select等操作<br>需要注意的是，<font color="red">操作要记得分号结尾</font><br>如果忘记输入分号可以用\c来结束命令输入<br>常见的操作如下表</p>
+<h2 id=""><a href="#" class="headerlink" title=""></a><a id="more"></a></h2><p>连接：mysql -h主机地址 -u用户名 －p用户密码 （注:<font color="Salmon">u与root可以不用加空格，其它也一样</font>）<br>断开：exit （回车） </p>
+<p>创建授权：grant select on 数据库.<em> to 用户名@登录主机 identified by \”密码\”<br>修改密码：mysqladmin -u用户名 -p旧密码 password 新密码<br>删除授权: revoke select,insert,update,delete om </em>.* from test2@localhost; </p>
+<p>显示数据库：show databases;<br>显示数据表：show tables;<br>显示表结构：describe 表名; </p>
+<p>创建库：create database 库名;<br>删除库：drop database 库名;<br>使用库：use 库名; </p>
+<p>创建表：create table 表名 (字段设定列表);<br>删除表：drop table 表名;<br>修改表：alter table t1 rename t2<br>查询表：select * from 表名;<br>清空表：delete from 表名;<br>备份表: mysqlbinmysqldump -h(ip) -uroot -p(password) databasename tablename &gt; tablename.sql<br>恢复表: mysqlbinmysql -h(ip) -uroot -p(password) databasename tablename &lt; tablename.sql（操作前先把原来表删除） </p>
+<p>增加列：ALTER TABLE t2 ADD c INT UNSIGNED NOT NULL AUTO_INCREMENT,ADD INDEX (c);<br>修改列：ALTER TABLE t2 MODIFY a TINYINT NOT NULL, CHANGE b c CHAR(20);<br>删除列：ALTER TABLE t2 DROP COLUMN c; </p>
+<p>备份数据库：mysql\bin\mysqldump -h(ip) -uroot -p(password) databasename &gt; database.sql </p>
 
       
     </div>
@@ -187,7 +194,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2014/07/11/xml,array转换/" data-title="xml,array的转换" data-url="https://niniyang.github.io/2014/07/11/xml,array转换/"></div>
+	 <div class="ds-thread" data-thread-key="/2014/05/11/Windows中cmd操作MySQL/" data-title="Windows中cmd操作mysql" data-url="https://niniyang.github.io/2014/05/11/Windows中cmd操作MySQL/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -208,7 +215,7 @@
 
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
 
     </footer>
   </div>
@@ -216,10 +223,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2014/05/11/MySQL sql文件导入导出/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          MySQL .sql文件导入导出
+        
+      </div>
+    </a>
   
-    <a href="/2014/06/05/MySQL运行状态show status中文详解/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2014/05/11/firefox_config/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MySQL运行状态show status中文详解</div>
+      <div class="article-nav-title">firefox config</div>
     </a>
   
 </nav>
@@ -233,7 +249,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-        <ol class="artnav">None</ol>
+        <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#"><span class="nav-number">1.</span> <span class="nav-text"></span></a></li></ol>
     
     </div>
   </aside>

@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xml,array的转换 | (ˇˍˇ) ～</title>
+  <title>mysql运行状态show status中文详解 | (ˇˍˇ) ～</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="array" />
+  <meta name="keywords" content="MySQL" />
   
   
   
   
-  <meta name="description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
-<meta name="keywords" content="array">
+  <meta name="description" content="要优化MySQL运行效率都少不了要运行show status查看各种状态，下面的这个表是参考官方文档及网上资料整理出来的show status中文详细解释，存档方便以后查阅。">
+<meta name="keywords" content="MySQL">
 <meta property="og:type" content="article">
-<meta property="og:title" content="xml,array的转换">
-<meta property="og:url" content="https://niniyang.github.io/2014/07/11/xml,array转换/index.html">
+<meta property="og:title" content="MySQL运行状态show status中文详解">
+<meta property="og:url" content="https://niniyang.github.io/2014/06/05/MySQL运行状态show status中文详解/index.html">
 <meta property="og:site_name" content="(ˇˍˇ) ～">
-<meta property="og:description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
-<meta property="og:updated_time" content="2017-06-16T08:38:41.253Z">
+<meta property="og:description" content="要优化MySQL运行效率都少不了要运行show status查看各种状态，下面的这个表是参考官方文档及网上资料整理出来的show status中文详细解释，存档方便以后查阅。">
+<meta property="og:updated_time" content="2017-06-16T08:47:12.727Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xml,array的转换">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
+<meta name="twitter:title" content="MySQL运行状态show status中文详解">
+<meta name="twitter:description" content="要优化MySQL运行效率都少不了要运行show status查看各种状态，下面的这个表是参考官方文档及网上资料整理出来的show status中文详细解释，存档方便以后查阅。">
   
     <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
   
@@ -151,7 +151,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-xml,array转换" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-MySQL运行状态show status中文详解" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -159,7 +159,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      xml,array的转换
+      MySQL运行状态show status中文详解
     </h1>
   
 
@@ -167,17 +167,120 @@
     
     <div class="article-meta">
       
-	<a href="/2014/07/11/xml,array转换/" class="article-date">
-	  <time datetime="2014-07-11T06:14:47.000Z" itemprop="datePublished">2014-07-11</time>
+	<a href="/2014/06/05/MySQL运行状态show status中文详解/" class="article-date">
+	  <time datetime="2014-06-05T06:45:47.000Z" itemprop="datePublished">2014-06-05</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/php/">php</a>
+    <a class="article-category-link" href="/categories/database/">database</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//xml转为array</div><div class="line">public <span class="keyword">function</span> xmlToArray(<span class="variable">$xml</span>)</div><div class="line">&#123;</div><div class="line">    <span class="variable">$xml</span>=simplexml_load_string(<span class="variable">$xml</span>, <span class="string">'SimpleXMLElement'</span>, LIBXML_NOCDATA);</div><div class="line">    <span class="variable">$array_data</span> = json_decode(json_encode(<span class="variable">$xml</span>), <span class="literal">true</span>);</div><div class="line">    <span class="built_in">return</span> <span class="variable">$array_data</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//array转xml</div><div class="line">public <span class="keyword">function</span> arrayToXml(<span class="variable">$arr</span>)</div><div class="line">&#123;</div><div class="line">    <span class="variable">$xml</span> = <span class="string">"&lt;xml&gt;"</span>;</div><div class="line">    foreach (<span class="variable">$arr</span> as <span class="variable">$key</span>=&gt;<span class="variable">$val</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (is_numeric(<span class="variable">$val</span>))</div><div class="line">        &#123;</div><div class="line">            <span class="variable">$xml</span>.=<span class="string">"&lt;"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>.<span class="variable">$val</span>.<span class="string">"&lt;/"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="variable">$xml</span>.=<span class="string">"&lt;"</span>.<span class="variable">$key</span>.<span class="string">"&gt;&lt;![CDATA["</span>.<span class="variable">$val</span>.<span class="string">"]]&gt;&lt;/"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="variable">$xml</span>.=<span class="string">"&lt;/xml&gt;"</span>;</div><div class="line">    <span class="built_in">return</span> <span class="variable">$xml</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+        <p>要优化MySQL运行效率都少不了要运行show status查看各种状态，下面的这个表是参考官方文档及网上资料整理出来的show status中文详细解释，存档方便以后查阅。</p>
+<a id="more"></a>
+<table>
+<thead>
+<tr>
+<th>状态名</th>
+<th style="text-align:center">作用域</th>
+<th style="text-align:center">详细解释</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Aborted_clients</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">由于客户端没有正确关闭连接导致客户端终止而中断的连接数</td>
+</tr>
+<tr>
+<td>Aborted_connects</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">试图连接到MySQL服务器而失败的连接数</td>
+</tr>
+<tr>
+<td>Binlog_cache_disk_use</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">使用临时二进制日志缓存但超过binlog_cache_size值并使用临时文件来保存事务中的语句的事务数量</td>
+</tr>
+<tr>
+<td>Binlog_cache_use</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">使用临时二进制日志缓存的事务数量</td>
+</tr>
+<tr>
+<td>Bytes_received</td>
+<td style="text-align:center">Both</td>
+<td style="text-align:center">试图连接到MySQL服务器而失败的连接数</td>
+</tr>
+<tr>
+<td>Bytes_sent</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">从所有客户端接收到的字节数。</td>
+</tr>
+<tr>
+<td>com*</td>
+<td style="text-align:center"></td>
+<td style="text-align:center">各种数据库操作的数量</td>
+</tr>
+<tr>
+<td>Compression</td>
+<td style="text-align:center">Session</td>
+<td style="text-align:center">客户端与服务器之间只否启用压缩协议</td>
+</tr>
+<tr>
+<td>Connections</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">试图连接到(不管是否成功)MySQL服务器的连接数</td>
+</tr>
+<tr>
+<td>Created_tmp_disk_tables</td>
+<td style="text-align:center">Both</td>
+<td style="text-align:center">服务器执行语句时在硬盘上自动创建的临时表的数量</td>
+</tr>
+<tr>
+<td>Created_tmp_files</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">mysqld已经创建的临时文件的数量</td>
+</tr>
+<tr>
+<td>Created_tmp_tables</td>
+<td style="text-align:center">Both</td>
+<td style="text-align:center">服务器执行语句时自动创建的内存中的临时表的数量。如果Created_tmp_disk_tables较大，你可能要增加tmp_table_size值使临时 表基于内存而不基于硬盘</td>
+</tr>
+<tr>
+<td>Delayed_errors</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">用INSERT DELAYED写的出现错误的行数(可能为duplicate key)。</td>
+</tr>
+<tr>
+<td>Delayed_insert_threads</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">使用的INSERT DELAYED处理器线程数。</td>
+</tr>
+<tr>
+<td>Delayed_writes</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">写入的INSERT DELAYED行数</td>
+</tr>
+<tr>
+<td>Flush_commands</td>
+<td style="text-align:center">Global</td>
+<td style="text-align:center">执行的FLUSH语句数。</td>
+</tr>
+<tr>
+<td>Handler_commit</td>
+<td style="text-align:center">Both</td>
+<td style="text-align:center">内部提交语句数</td>
+</tr>
+<tr>
+<td>Handler_delete</td>
+<td style="text-align:center">Both</td>
+<td style="text-align:center">行从表中删除的次数。</td>
+</tr>
+</tbody>
+</table>
+<p>待续。。。</p>
 
       
     </div>
@@ -187,7 +290,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2014/07/11/xml,array转换/" data-title="xml,array的转换" data-url="https://niniyang.github.io/2014/07/11/xml,array转换/"></div>
+	 <div class="ds-thread" data-thread-key="/2014/06/05/MySQL运行状态show status中文详解/" data-title="MySQL运行状态show status中文详解" data-url="https://niniyang.github.io/2014/06/05/MySQL运行状态show status中文详解/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -208,7 +311,7 @@
 
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
 
     </footer>
   </div>
@@ -216,10 +319,19 @@
     
 <nav id="article-nav">
   
+    <a href="/2014/07/11/xml,array转换/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          xml,array的转换
+        
+      </div>
+    </a>
   
-    <a href="/2014/06/05/MySQL运行状态show status中文详解/" id="article-nav-older" class="article-nav-link-wrap">
+  
+    <a href="/2014/05/11/MySQL sql文件导入导出/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MySQL运行状态show status中文详解</div>
+      <div class="article-nav-title">MySQL .sql文件导入导出</div>
     </a>
   
 </nav>

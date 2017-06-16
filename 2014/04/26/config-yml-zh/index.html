@@ -3,25 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>导入sql大文件超时 | (ˇˍˇ) ～</title>
+  <title>配置说明 | (ˇˍˇ) ～</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="database" />
+  <meta name="keywords" content="配置说明" />
   
   
   
   
-  <meta name="description" content=".sql文件太大，导入时报错如下：Error Code: 2006 - MySQL server has gone away.  原因：配置文件中的max_allowed_packet不够大。 解决：12# 直接用SQL语句：SET GLOBAL  max_allowed_packet=67108864;">
-<meta name="keywords" content="database">
+  <meta name="description" content="describe _config.yml">
+<meta name="keywords" content="配置说明">
 <meta property="og:type" content="article">
-<meta property="og:title" content="导入SQL大文件超时">
-<meta property="og:url" content="https://niniyang.github.io/2017/04/29/导入SQL大文件超时/index.html">
+<meta property="og:title" content="配置说明">
+<meta property="og:url" content="https://niniyang.github.io/2014/04/26/config-yml-zh/index.html">
 <meta property="og:site_name" content="(ˇˍˇ) ～">
-<meta property="og:description" content=".sql文件太大，导入时报错如下：Error Code: 2006 - MySQL server has gone away.  原因：配置文件中的max_allowed_packet不够大。 解决：12# 直接用SQL语句：SET GLOBAL  max_allowed_packet=67108864;">
-<meta property="og:updated_time" content="2017-05-11T03:36:58.599Z">
+<meta property="og:description" content="describe _config.yml">
+<meta property="og:updated_time" content="2017-06-16T06:31:40.296Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="导入SQL大文件超时">
-<meta name="twitter:description" content=".sql文件太大，导入时报错如下：Error Code: 2006 - MySQL server has gone away.  原因：配置文件中的max_allowed_packet不够大。 解决：12# 直接用SQL语句：SET GLOBAL  max_allowed_packet=67108864;">
+<meta name="twitter:title" content="配置说明">
+<meta name="twitter:description" content="describe _config.yml">
   
     <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
   
@@ -151,7 +151,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-导入SQL大文件超时" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-config-yml-zh" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -159,7 +159,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      导入SQL大文件超时
+      配置说明
     </h1>
   
 
@@ -167,20 +167,22 @@
     
     <div class="article-meta">
       
-	<a href="/2017/04/29/导入SQL大文件超时/" class="article-date">
-	  <time datetime="2017-04-29T08:17:16.000Z" itemprop="datePublished">2017-04-29</time>
+	<a href="/2014/04/26/config-yml-zh/" class="article-date">
+	  <time datetime="2014-04-26T08:17:16.000Z" itemprop="datePublished">2014-04-26</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/database/">database</a>
+    <a class="article-category-link" href="/categories/HEXO/">HEXO</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="sql文件太大，导入时报错如下："><a href="#sql文件太大，导入时报错如下：" class="headerlink" title=".sql文件太大，导入时报错如下："></a>.sql文件太大，导入时报错如下：</h3><font color="red">Error Code: 2006 - MySQL server has gone away.</font>
-
-<p>原因：配置文件中的max_allowed_packet不够大。</p>
-<p>解决：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 直接用SQL语句：</span></div><div class="line">SET GLOBAL  max_allowed_packet=67108864;</div></pre></td></tr></table></figure></p>
+        <h3 id="describe-config-yml"><a href="#describe-config-yml" class="headerlink" title="describe _config.yml"></a>describe _config.yml</h3><a id="more"></a>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Hexo Configuration</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></div><div class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></div><div class="line"></div><div class="line"><span class="comment"># Site</span></div><div class="line">title: (ˇˍˇ) ～</div><div class="line">subtitle:</div><div class="line">description: noting...</div><div class="line">author: niniY</div><div class="line">language: en</div><div class="line">timezone:</div><div class="line"></div><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line">url: https://niniyang.github.io/</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"><span class="comment"># Directory</span></div><div class="line">source_dir: <span class="built_in">source</span></div><div class="line">public_dir: public</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang</div><div class="line">skip_render:</div><div class="line"></div><div class="line"><span class="comment"># Writing</span></div><div class="line">new_post_name: :title.md <span class="comment"># File name of new posts</span></div><div class="line">default_layout: post</div><div class="line">titlecase: <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></div><div class="line">external_link: <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></div><div class="line">filename_case: 0</div><div class="line">render_drafts: <span class="literal">false</span></div><div class="line">post_asset_folder: <span class="literal">false</span></div><div class="line">relative_link: <span class="literal">false</span></div><div class="line">future: <span class="literal">true</span></div><div class="line">highlight:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">  line_number: <span class="literal">true</span></div><div class="line">  auto_detect: <span class="literal">false</span></div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"><span class="comment"># Category &amp; Tag</span></div><div class="line">default_category: uncategorized</div><div class="line">category_map: 1,2,3,4</div><div class="line">tag_map: 5,6,7,8</div><div class="line"></div><div class="line"><span class="comment"># Date / Time format</span></div><div class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></div><div class="line"><span class="comment">## You can customize the date format as defined in</span></div><div class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"><span class="comment"># Pagination</span></div><div class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></div><div class="line">per_page: 10</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></div><div class="line">theme: hiker</div><div class="line"></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: git@github.com:niniyang/niniyang.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
+<h4 id="在执行-hexo-deploy-后-出现-error-deployer-not-found-github错误，原因可能如下："><a href="#在执行-hexo-deploy-后-出现-error-deployer-not-found-github错误，原因可能如下：" class="headerlink" title="在执行 hexo deploy 后,出现 error deployer not found:github错误，原因可能如下："></a>在执行 hexo deploy 后,出现 error deployer not found:github错误，原因可能如下：</h4><ol>
+<li>hexo 更新到3.0之后，deploy的type 的github需要改成git</li>
+<li>npm install hexo-deployer-git –save 改了之后执行</li>
+</ol>
 
       
     </div>
@@ -190,7 +192,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2017/04/29/导入SQL大文件超时/" data-title="导入SQL大文件超时" data-url="https://niniyang.github.io/2017/04/29/导入SQL大文件超时/"></div>
+	 <div class="ds-thread" data-thread-key="/2014/04/26/config-yml-zh/" data-title="配置说明" data-url="https://niniyang.github.io/2014/04/26/config-yml-zh/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -211,7 +213,7 @@
 
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/database/">database</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/配置说明/">配置说明</a></li></ul>
 
     </footer>
   </div>
@@ -219,19 +221,19 @@
     
 <nav id="article-nav">
   
-    <a href="/2017/05/11/firefox_config/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2014/04/26/config-yml-theme-zh/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          firefox config
+          主题配置说明
         
       </div>
     </a>
   
   
-    <a href="/2017/04/25/hexo主题配置/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2014/04/24/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hexo theme config</div>
+      <div class="article-nav-title">Hello World</div>
     </a>
   
 </nav>
@@ -245,7 +247,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#sql文件太大，导入时报错如下："><span class="nav-number">1.</span> <span class="nav-text">.sql文件太大，导入时报错如下：</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#describe-config-yml"><span class="nav-number">1.</span> <span class="nav-text">describe _config.yml</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在执行-hexo-deploy-后-出现-error-deployer-not-found-github错误，原因可能如下："><span class="nav-number">1.1.</span> <span class="nav-text">在执行 hexo deploy 后,出现 error deployer not found:github错误，原因可能如下：</span></a></li></ol></li></ol>
     
     </div>
   </aside>

@@ -3,21 +3,25 @@
 <head>
   <meta charset="utf-8">
   
-  <title>archives: 2017/4 | (ˇˍˇ) ～</title>
+  <title>mysql .sql文件导入导出 | (ˇˍˇ) ～</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+  <meta name="keywords" content="MySQL" />
   
   
   
-  <meta name="description" content="noting...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="(ˇˍˇ) ～">
-<meta property="og:url" content="https://niniyang.github.io/archives/2017/04/index.html">
+  
+  <meta name="description" content="经常要导入导出数据量庞大的数据，经常要超时！！！身为菜鸟心好累，ORZ…于是那啥..从同事那里偷到了一点技艺..嗯~~~ (ˇˍˇ) ～ windows下">
+<meta name="keywords" content="MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL .sql文件导入导出">
+<meta property="og:url" content="https://niniyang.github.io/2014/05/11/MySQL sql文件导入导出/index.html">
 <meta property="og:site_name" content="(ˇˍˇ) ～">
-<meta property="og:description" content="noting...">
+<meta property="og:description" content="经常要导入导出数据量庞大的数据，经常要超时！！！身为菜鸟心好累，ORZ…于是那啥..从同事那里偷到了一点技艺..嗯~~~ (ˇˍˇ) ～ windows下">
+<meta property="og:updated_time" content="2017-06-16T08:21:21.050Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="(ˇˍˇ) ～">
-<meta name="twitter:description" content="noting...">
+<meta name="twitter:title" content="MySQL .sql文件导入导出">
+<meta name="twitter:description" content="经常要导入导出数据量庞大的数据，经常要超时！！！身为菜鸟心好累，ORZ…于是那啥..从同事那里偷到了一点技艺..嗯~~~ (ˇˍˇ) ～ windows下">
   
     <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
   
@@ -50,14 +54,12 @@
   
 
   
-    <link rel="stylesheet" href="/css/archive.css" >
-  
 
 </head>
 
 
 
-  <body>
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
 
 
   
@@ -80,7 +82,7 @@
             
               <a class="brand" style="
                  margin-top: 0px;"  
-                 >
+                href="#" data-toggle="modal" data-target="#myModal" >
                   <img width="124px" height="124px" alt="Hike News" src="/css/images/cute.jpg">
               </a>
             
@@ -149,149 +151,105 @@
             
       <div id="content" class="outer">
         
-          <section id="main">
-  <div class="archives-tags-wrap"><blockquote><span>There are 10 posts in total till now.</span></blockquote>
-
-
-<!-- 分页显示 -->
-
-	
-	
-		
-		
-		  
-		  
-		  <section class="archives-wrap">
-		    <div class="archive-year-wrap">
-		      <h1><a href="/archives/2017" class="archive-year">2017</a></h1>
-		    </div>
-		    <div class="archives">
-		
-		<article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-	<a href="/2017/04/29/导入SQL大文件超时/" class="archive-article-date">
-	  <time datetime="2017-04-29T08:17:16.000Z" itemprop="datePublished">2017-04-29</time>
-	</a>
-
-      
+          <section id="main" style="float:none;"><article id="post-MySQL sql文件导入导出" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
   
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/04/29/导入SQL大文件超时/">导入SQL大文件超时</a>
+    <h1 class="thumb" class="article-title" itemprop="name">
+      MySQL .sql文件导入导出
     </h1>
   
 
-    </header>
-  </div>
-</article>
-	
-		
-		
-		<article class="archive-article archive-type-[layout]">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
+      </header>
+    
+    <div class="article-meta">
       
-	<a href="/2017/04/25/hexo主题配置/" class="archive-article-date">
-	  <time datetime="2017-04-25T03:33:22.000Z" itemprop="datePublished">2017-04-25</time>
+	<a href="/2014/05/11/MySQL sql文件导入导出/" class="article-date">
+	  <time datetime="2014-05-11T06:14:47.000Z" itemprop="datePublished">2014-05-11</time>
 	</a>
 
       
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2017/04/25/hexo主题配置/">Hexo theme config</a>
-    </h1>
-  
+    <a class="article-category-link" href="/categories/database/">database</a>
 
-    </header>
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>经常要导入导出数据量庞大的数据，经常要超时！！！身为菜鸟心好累，ORZ…<br>于是那啥..从同事那里偷到了一点技艺..嗯~~~ (ˇˍˇ) ～</p>
+<p><font face="微软雅黑" color="Salmon">windows下</font><br><a id="more"></a></p>
+<h6 id="连接数据库"><a href="#连接数据库" class="headerlink" title="连接数据库"></a>连接数据库</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">连接：mysql -h主机地址 -u用户名 －p用户密码 （注:u与root可以不用加空格，其它也一样） </div><div class="line">断开：<span class="built_in">exit</span> （回车）</div></pre></td></tr></table></figure>
+<h6 id="导入数据库"><a href="#导入数据库" class="headerlink" title="导入数据库"></a>导入数据库</h6><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">常用<span class="built_in">source</span> 命令</div><div class="line">进入mysql数据库控制台，如</div><div class="line">mysql -u root -p</div><div class="line">mysql&gt;use 数据库</div><div class="line">然后使用<span class="built_in">source</span>命令，后面参数为脚本文件(如这里用到的.sql)</div><div class="line">mysql&gt;<span class="built_in">source</span> d:/dbname.sql</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2014/05/11/MySQL sql文件导入导出/" data-title="MySQL .sql文件导入导出" data-url="https://niniyang.github.io/2014/05/11/MySQL sql文件导入导出/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"niniY"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MySQL/">MySQL</a></li></ul>
+
+    </footer>
   </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2014/07/11/xml,array转换/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          xml,array的转换
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2014/04/26/config-yml-theme-zh/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">主题配置说明</div>
+    </a>
+  
+</nav>
+
+  
 </article>
-	
-	
-		</div></section>
-	
 
-	<!-- 页数指示器 -->
-	
+<!-- Table of Contents -->
 
-
-
-
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-6"><a class="nav-link" href="#连接数据库"><span class="nav-number">1.</span> <span class="nav-text">连接数据库</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#导入数据库"><span class="nav-number">2.</span> <span class="nav-text">导入数据库</span></a></li></ol>
+    
+    </div>
+  </aside>
 </section>
-          <aside id="sidebar">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/HEXO/">HEXO</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/browsers/">browsers</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/database/">database</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/php/">php</a><span class="category-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/MySQL/">MySQL</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/array/">array</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/database/">database</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/firefox/">firefox</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hexo/">hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/主题配置说明/">主题配置说明</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/配置说明/">配置说明</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/MySQL/" style="font-size: 20px;">MySQL</a> <a href="/tags/array/" style="font-size: 10px;">array</a> <a href="/tags/database/" style="font-size: 10px;">database</a> <a href="/tags/firefox/" style="font-size: 10px;">firefox</a> <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/主题配置说明/" style="font-size: 10px;">主题配置说明</a> <a href="/tags/配置说明/" style="font-size: 10px;">配置说明</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/06/">June 2017</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/05/">May 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">3</span></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2017/06/05/MySQL运行状态show status中文详解/">MySQL运行状态show status中文详解</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/11/Windows中cmd操作MySQL/">Windows中cmd操作mysql</a>
-          </li>
-        
-          <li>
-            <a href="/2017/05/11/firefox_config/">firefox config</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/29/导入SQL大文件超时/">导入SQL大文件超时</a>
-          </li>
-        
-          <li>
-            <a href="/2017/04/25/hexo主题配置/">Hexo theme config</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
         
       </div>
       
@@ -395,6 +353,8 @@
 
 
 
+
+  <script src="/js/dialog.js"></script>
 
 
 

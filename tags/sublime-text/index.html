@@ -3,25 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>xml,array的转换 | (ˇˍˇ) ～</title>
+  <title>tag: sublime text | (ˇˍˇ) ～</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="arrayxml" />
   
   
   
-  
-  <meta name="description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
-<meta name="keywords" content="array,xml">
-<meta property="og:type" content="article">
-<meta property="og:title" content="xml,array的转换">
-<meta property="og:url" content="https://niniyang.github.io/2014/07/11/xml,array转换/index.html">
+  <meta name="description" content="noting...">
+<meta property="og:type" content="website">
+<meta property="og:title" content="(ˇˍˇ) ～">
+<meta property="og:url" content="https://niniyang.github.io/tags/sublime-text/index.html">
 <meta property="og:site_name" content="(ˇˍˇ) ～">
-<meta property="og:description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
-<meta property="og:updated_time" content="2017-06-16T08:54:00.699Z">
+<meta property="og:description" content="noting...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xml,array的转换">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425//xml转为arraypublic function xmlToArray($xml)&amp;#123;    $xml=simplexml_load_string($xml, &apos;SimpleXMLElement&apos;, LIBXML_NOCDATA);    $array_data = json_decode(json_e">
+<meta name="twitter:title" content="(ˇˍˇ) ～">
+<meta name="twitter:description" content="noting...">
   
     <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
   
@@ -54,12 +50,14 @@
   
 
   
+    <link rel="stylesheet" href="/css/archive.css" >
+  
 
 </head>
 
 
 
-  <body data-spy="scroll" data-target="#toc" data-offset="50">
+  <body>
 
 
   
@@ -82,7 +80,7 @@
             
               <a class="brand" style="
                  margin-top: 0px;"  
-                href="#" data-toggle="modal" data-target="#myModal" >
+                 >
                   <img width="124px" height="124px" alt="Hike News" src="/css/images/cute.jpg">
               </a>
             
@@ -151,101 +149,44 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-xml,array转换" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="article-inner">
-    
-    
-      <header class="article-header">
-        
+          <section id="main" style="float:none;">
   
-    <h1 class="thumb" class="article-title" itemprop="name">
-      xml,array的转换
-    </h1>
   
-
-      </header>
+  
     
-    <div class="article-meta">
+    
       
-	<a href="/2014/07/11/xml,array转换/" class="article-date">
-	  <time datetime="2014-07-11T06:14:47.000Z" itemprop="datePublished">2014-07-11</time>
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <h1><a href="/archives/2014" class="archive-year">2014</a></h1>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-[layout]">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      
+	<a href="/2014/12/25/sublime text全程指南/" class="archive-article-date">
+	  <time datetime="2014-12-25T02:33:22.000Z" itemprop="datePublished">2014-12-25</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/php/">php</a>
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="archive-article-title" href="/2014/12/25/sublime text全程指南/">sublime text全程指南</a>
+    </h1>
+  
 
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">//xml转为array</div><div class="line">public <span class="keyword">function</span> xmlToArray(<span class="variable">$xml</span>)</div><div class="line">&#123;</div><div class="line">    <span class="variable">$xml</span>=simplexml_load_string(<span class="variable">$xml</span>, <span class="string">'SimpleXMLElement'</span>, LIBXML_NOCDATA);</div><div class="line">    <span class="variable">$array_data</span> = json_decode(json_encode(<span class="variable">$xml</span>), <span class="literal">true</span>);</div><div class="line">    <span class="built_in">return</span> <span class="variable">$array_data</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line">//array转xml</div><div class="line">public <span class="keyword">function</span> arrayToXml(<span class="variable">$arr</span>)</div><div class="line">&#123;</div><div class="line">    <span class="variable">$xml</span> = <span class="string">"&lt;xml&gt;"</span>;</div><div class="line">    foreach (<span class="variable">$arr</span> as <span class="variable">$key</span>=&gt;<span class="variable">$val</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">if</span> (is_numeric(<span class="variable">$val</span>))</div><div class="line">        &#123;</div><div class="line">            <span class="variable">$xml</span>.=<span class="string">"&lt;"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>.<span class="variable">$val</span>.<span class="string">"&lt;/"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>;</div><div class="line">        &#125;</div><div class="line">        <span class="keyword">else</span></div><div class="line">            <span class="variable">$xml</span>.=<span class="string">"&lt;"</span>.<span class="variable">$key</span>.<span class="string">"&gt;&lt;![CDATA["</span>.<span class="variable">$val</span>.<span class="string">"]]&gt;&lt;/"</span>.<span class="variable">$key</span>.<span class="string">"&gt;"</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="variable">$xml</span>.=<span class="string">"&lt;/xml&gt;"</span>;</div><div class="line">    <span class="built_in">return</span> <span class="variable">$xml</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      
-        
-	<div id="comment">
-	
-	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2014/07/11/xml,array转换/" data-title="xml,array的转换" data-url="https://niniyang.github.io/2014/07/11/xml,array转换/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"niniY"};
-	  (function() {
-	    var ds = document.createElement('script');
-	    ds.type = 'text/javascript';ds.async = true;
-	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-	    ds.charset = 'UTF-8';
-	    (document.getElementsByTagName('head')[0] 
-	     || document.getElementsByTagName('body')[0]).appendChild(ds);
-	  })();
-	  </script>
-	<!-- 多说公共JS代码 end -->
-	
-	</div>
-
-
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/array/">array</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/xml/">xml</a></li></ul>
-
-    </footer>
+    </header>
   </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2014/12/25/sublime text全程指南/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          sublime text全程指南
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/06/05/MySQL运行状态show status中文详解/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">MySQL运行状态show status中文详解</div>
-    </a>
-  
-</nav>
-
-  
 </article>
+  
+  
+    </div></section>
+  
 
-<!-- Table of Contents -->
 
-  <aside id="sidebar">
-    <div id="toc" class="toc-article">
-    <strong class="toc-title">Contents</strong>
-    
-        <ol class="artnav">None</ol>
-    
-    </div>
-  </aside>
 </section>
         
       </div>
@@ -350,8 +291,6 @@
 
 
 
-
-  <script src="/js/dialog.js"></script>
 
 
 

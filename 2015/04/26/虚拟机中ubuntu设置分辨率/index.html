@@ -28,7 +28,7 @@
 <meta property="og:image" content="https://niniyang.github.io/images/2.png">
 <meta property="og:image" content="https://niniyang.github.io/images/3.png">
 <meta property="og:image" content="https://niniyang.github.io/images/4.png">
-<meta property="og:updated_time" content="2017-06-21T08:48:23.490Z">
+<meta property="og:updated_time" content="2017-06-21T08:49:07.767Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机中ubuntu设置分辨率">
 <meta name="twitter:description" content="前言刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。 自定义分辨率1.输入：$ cvt 1600 900 返回结果如图：">
@@ -197,7 +197,7 @@
 <p>以上，看到显示器名称：Virtual1。</p>
 <p>3.设置分辨率</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo xrandr --newmode <span class="string">"1600x900_60.00"</span> 118.25 1600 1696 1856 2112 900 903 908 934 -hsync +vsync</div><div class="line">注：想要设置的分辨率不一样，这条命令后面的数据也随着改变。</div><div class="line"></div><div class="line">$ sudo xrandr --addmode Virtual1 <span class="string">"1600x900_60.00"</span></div></pre></td></tr></table></figure>
-<p>4.设置1600*900分辨率<br>系统设置-&gt;显示-&gt;分辨率（选择1600x900）-&gt;应用<br>如下图：</p>
+<p>4.设置1600x900分辨率<br>系统设置-&gt;显示-&gt;分辨率（选择1600x900）-&gt;应用<br>如下图：</p>
 <p><img src="/images/3.png" alt=""></p>
 <p>5.保存分辨率<br>重启后，以上分辨率又会失效，保存一下上面两个命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输入：$ sudo gedit /etc/profile</div></pre></td></tr></table></figure>

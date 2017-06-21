@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>http学习笔记 | (ˇˍˇ) ～</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="HTTP协议" />
+  
+  
+    <meta name="google-site-verification" content="true" />
+  
+  
+    <meta name="baidu-site-verification" content="true" />
+  
+  
+    <meta name="360-site-verification" content="true" />
+  
+  <meta name="description" content="前言基本每天都在用HTTP，可是对HTTP又感觉很陌生，最近比较闲，就了解整理点笔记。 关于HTTP重温一下大学学过的差不多已经忘记的一点概念 = =|||Internet四层网络协议模型（也叫TCP/IP四层模型），包括：数据链路层，网络层、传输层和应用层。网络层最著名的协议：IP协议。传输层最著名的协议：TCP协议、UDP协议。应用层协议较多：如FTP协议，POP协议，SMTP协议，DNS协议">
+<meta name="keywords" content="HTTP,协议">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTTP学习笔记">
+<meta property="og:url" content="https://niniyang.github.io/2015/05/06/HTTP学习笔记/index.html">
+<meta property="og:site_name" content="(ˇˍˇ) ～">
+<meta property="og:description" content="前言基本每天都在用HTTP，可是对HTTP又感觉很陌生，最近比较闲，就了解整理点笔记。 关于HTTP重温一下大学学过的差不多已经忘记的一点概念 = =|||Internet四层网络协议模型（也叫TCP/IP四层模型），包括：数据链路层，网络层、传输层和应用层。网络层最著名的协议：IP协议。传输层最著名的协议：TCP协议、UDP协议。应用层协议较多：如FTP协议，POP协议，SMTP协议，DNS协议">
+<meta property="og:image" content="https://niniyang.github.io/images/状态1.png">
+<meta property="og:image" content="https://niniyang.github.io/images/状态2.png">
+<meta property="og:image" content="https://niniyang.github.io/images/状态3.png">
+<meta property="og:image" content="https://niniyang.github.io/images/状态4.png">
+<meta property="og:updated_time" content="2017-06-21T03:15:38.249Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTTP学习笔记">
+<meta name="twitter:description" content="前言基本每天都在用HTTP，可是对HTTP又感觉很陌生，最近比较闲，就了解整理点笔记。 关于HTTP重温一下大学学过的差不多已经忘记的一点概念 = =|||Internet四层网络协议模型（也叫TCP/IP四层模型），包括：数据链路层，网络层、传输层和应用层。网络层最著名的协议：IP协议。传输层最著名的协议：TCP协议、UDP协议。应用层协议较多：如FTP协议，POP协议，SMTP协议，DNS协议">
+<meta name="twitter:image" content="https://niniyang.github.io/images/状态1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
+  
+  <link rel="icon" href="/css/images/cute.jpg">
+  <link rel="apple-touch-icon" href="/css/images/cute.jpg">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+  <link rel="stylesheet" href="/css/style.css">
+
+  <script src="/js/jquery-3.1.1.min.js"></script>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="/css/bootstrap.css" >
+
+  
+    <link rel="stylesheet" href="/css/dialog.css">
+  
+
+  
+    <link rel="stylesheet" href="/css/header-post.css" >
+  
+
+  
+
+</head>
+
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  
+  <div id="container">
+    <div id="wrap">
+      
+        <header>
+
+    <div id="allheader" class="navbar navbar-default navbar-static-top" role="navigation">
+        <div class="navbar-inner">
+          
+          <div class="container"> 
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+
+            
+              <a class="brand" style="
+                 margin-top: 0px;"  
+                href="#" data-toggle="modal" data-target="#myModal" >
+                  <img width="124px" height="124px" alt="Hike News" src="/css/images/cute.jpg">
+              </a>
+            
+            
+            <div class="navbar-collapse collapse">
+              <ul class="hnav navbar-nav">
+                
+                  <li> <a class="main-nav-link" href="/">Home</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
+                
+                  <li> <a class="main-nav-link" href="/about">About</a> </li>
+                
+                  <li><div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="Type something..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: 'Posts',
+            PAGES: 'Pages',
+            CATEGORIES: 'Categories',
+            TAGS: 'Tags',
+            UNTITLED: '(Untitled)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+<script src="/js/insight.js"></script>
+
+</div></li>
+            </div>
+          </div>
+                
+      </div>
+    </div>
+
+</header>
+
+
+
+      
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-HTTP学习笔记" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      HTTP学习笔记
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	<a href="/2015/05/06/HTTP学习笔记/" class="article-date">
+	  <time datetime="2015-05-06T08:17:16.000Z" itemprop="datePublished">2015-05-06</time>
+	</a>
+
+      
+    <a class="article-category-link" href="/categories/计算机网络协议/">计算机网络协议</a>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>基本每天都在用HTTP，可是对HTTP又感觉很陌生，最近比较闲，就了解整理点笔记。</p>
+<h3 id="关于HTTP"><a href="#关于HTTP" class="headerlink" title="关于HTTP"></a>关于HTTP</h3><h4 id="重温一下大学学过的差不多已经忘记的一点概念"><a href="#重温一下大学学过的差不多已经忘记的一点概念" class="headerlink" title="重温一下大学学过的差不多已经忘记的一点概念 = =|||"></a>重温一下大学学过的差不多已经忘记的一点概念 = =|||</h4><p>Internet四层网络协议模型（也叫TCP/IP四层模型），包括：数据链路层，网络层、传输层和应用层。<br>网络层最著名的协议：IP协议。<br>传输层最著名的协议：TCP协议、UDP协议。<br>应用层协议较多：如FTP协议，POP协议，SMTP协议，DNS协议，TELENT协议，以及今天学习的HTTP协议等。<br><a id="more"></a></p>
+<h4 id="概念（来自百度百科）"><a href="#概念（来自百度百科）" class="headerlink" title="概念（来自百度百科）"></a>概念（来自百度百科）</h4><p>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的WWW文件都必须遵守这个标准。</p>
+<p>HTTP是一个客户端和服务器端请求和应答的标准（TCP）。客户端是终端用户，服务器端是网站。通过使用Web浏览器、网络爬虫或者其它的工具，客户端发起一个到服务器上指定端口（默认端口为80）的HTTP请求。</p>
+<h4 id="how-it-works？"><a href="#how-it-works？" class="headerlink" title="how it works？"></a>how it works？</h4><p>基于HTTP协议的客户/服务器模式的信息交换过程，它分四个过程：建立连接、发送请求信息、发送响应信息、关闭连接。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">客户端发起请求，与服务器端完成“TCP三次握手”</div><div class="line">客户端向服务器端发出“HTTP请求报文”</div><div class="line">客户端与服务器端完成“TCP四次分手”</div></pre></td></tr></table></figure></p>
+<p>HTTP协议本身是一种无状态的协议，即每一个HTTP报文不依赖于其前面的报文状态。</p>
+<h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><p>HTTP协议中的URL主要是用于定位服务器端资源的位置，定义如下<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">http://host[:port][path]</div><div class="line"></div><div class="line">http:// 表示我们要使用HTTP协议；</div><div class="line">host 表示一个可用的域名或IP地址；</div><div class="line">port 为可选，表示要请求的端口号，缺省情况下为80</div><div class="line">path 为可选，表示要请求的资源所在的路径（也叫URI），缺省情况下为/</div></pre></td></tr></table></figure></p>
+<h4 id="报文格式"><a href="#报文格式" class="headerlink" title="报文格式"></a>报文格式</h4><p>请求报文格式：请求行 － 通用信息头 － 请求头 － 实体头 － 报文主体<br>响应报文格式：状态行 － 通用信息头 － 响应头 － 实体头 － 报文主体</p>
+<h4 id="HTTP请求报文方法"><a href="#HTTP请求报文方法" class="headerlink" title="HTTP请求报文方法"></a>HTTP请求报文方法</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">GET方法：请求某资源</div><div class="line">POST方法：请求某资源的同时附上一些数据</div><div class="line">HEAD方法：请求某资源对应的响应报文头</div><div class="line">PUT方法：上传一个资源</div><div class="line">DELETE方法：删除一个资源</div><div class="line">TRACE方法：让服务器回送请求报文，用于调试和排障</div><div class="line">OPTIONS：请求服务器性能信息</div><div class="line">CONNECT：预留给代理服务器所用</div></pre></td></tr></table></figure>
+<h4 id="HTTP状态码"><a href="#HTTP状态码" class="headerlink" title="HTTP状态码"></a>HTTP状态码</h4><p>状态码共分五种，总共只有三位，第一位表示状态类别。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">1xx：是进度通知类状态，意思就是说“请求我已经收到了，或你的请求我正在处理”；</div><div class="line">2xx：表示“你的请求我已经成功处理了”；</div><div class="line">3xx：即重定向，也就是服务器告诉客户端“你要的资源搬家了，你到某某地方再去找他吧”；</div><div class="line">4xx：客户端发来的响应报文里有些错误，比如语法错误或请求的资源不存在等；</div><div class="line">5xx：服务器端有些问题，已经无法处理完成你的请求了。</div></pre></td></tr></table></figure></p>
+<p>列举：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">200 OK：客户端请求成功了，客户端要的东西就在响应报文里了；</div><div class="line">301 Moved Permanently：客户端啊，你要请求的资源已经永久的搬家了，我把他的新地址放到了Location头部域中了；</div><div class="line">302 Moved Temporarily：客户端啊，你要请求的资源临时有事去别的地方了，我把他的位置放到了Location头部域中了，你可以先去那里找他，不过他应该是会回到他自己的家的；</div><div class="line">304 Not Modified：客户端啊，你要请求的资源自从上次你请求之后，就再也没有改动过，我想你是应该早就有这个资源了，所以在响应报文的数据部分我也没有再放这个资源。</div><div class="line">400 Bad Request：客户端发来的请求报文里有语法错误，服务器端实在看不懂了；</div><div class="line">401 Unauthorized：客户端发来的请求不是合法来源的请求，也就是这个客户端是没有被授权的；</div><div class="line">403 Forbidden：服务器端顺利收到了客户端的请求，但是因为某些理由，服务器端拒绝为他提供服务；</div><div class="line">404 Not Found：客户端要请求的资源不存在，八成是资源地址写错了；</div><div class="line">500 Internal Server Error：很遗憾，服务器不能给你提供服务了，服务器内部出现了不可预知的问题了；</div><div class="line">502 Bad Gateway：客户端你好，我是请求报文的代理服务器，持有资源的那个服务器在给我发送资源时出问题了；</div><div class="line">503 Server Unavailable：服务器现在可能是太忙了，暂时不能给你这个客户端提供服务了，或许稍后会恢复。</div></pre></td></tr></table></figure></p>
+<p>详细截图：<br><img src="/images/状态1.png" alt=""><br><img src="/images/状态2.png" alt=""><br><img src="/images/状态3.png" alt=""><br><img src="/images/状态4.png" alt=""></p>
+<h4 id="HTTP版本"><a href="#HTTP版本" class="headerlink" title="HTTP版本"></a>HTTP版本</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">0.9　已过时。只接受 GET 一种请求方法，没有在通讯中指定版本号，且不支持请求头。由于该版本不支持 POST 方法，所以客户端无法向服务器传递太多信息。</div><div class="line">HTTP/1.0　这是第一个在通讯中指定版本号的HTTP 协议版本，至今仍被广泛采用，特别是在代理服务器中。</div><div class="line">HTTP/1.1　当前版本。持久连接被默认采用，并能很好地配合代理服务器工作。还支持以管道方式同时发送多个请求，以便降低线路负载，提高传输速度。</div><div class="line">HTTP/1.1相较于 HTTP/1.0 协议的区别主要体现在：</div><div class="line">1 缓存处理</div><div class="line">2 带宽优化及网络连接的使用</div><div class="line">3 错误通知的管理</div><div class="line">4 消息在网络中的发送</div><div class="line">5 互联网地址的维护</div><div class="line">6 安全性及完整性</div></pre></td></tr></table></figure>
+<h4 id="一些高级用法mark（copy-from-http-roclinux-cn-p-3450）"><a href="#一些高级用法mark（copy-from-http-roclinux-cn-p-3450）" class="headerlink" title="一些高级用法mark（copy from http://roclinux.cn/?p=3450）"></a>一些高级用法mark（copy from <a href="http://roclinux.cn/?p=3450）" target="_blank" rel="external">http://roclinux.cn/?p=3450）</a></h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line">1 HTTP1.1中，我们可以在报文中使用Cache-Control域来控制缓存策略；而在HTTP1.0中则可以使用Pragma域来控制。为了确保达到效果，我们往往会在HTTP报文中同时设置Cache-Control:no-cache和Pragma:no-cache</div><div class="line"></div><div class="line">2 在请求报文中，我们可以设置Accept头部域来指明客户端希望接受哪些类型的数据，比如Accept:image/gif，则表明客户端希望接收gif图片数据。当然我们可以设置很多种可接受的类型。</div><div class="line"></div><div class="line">3 在请求报文中，Accept-Charset则是用来设置客户端希望接受的字符集。</div><div class="line"></div><div class="line">4 在请求报文中，Accept-Encoding则是用来指定客户端希望接受的编码类型。</div><div class="line"></div><div class="line">5 在请求报文中，Accept-Language是指明客户端希望接受的语言类型，例如Accept-Language:zh-cn，表明客户端希望得到中文的内容</div><div class="line"></div><div class="line">6 在请求报文中，If-Modified-Since域用作缓存策略。具体的原理是这样的，浏览器本地会缓存一些数据，包括网页、图片等，而且还会同时存储这些缓存数据在服务器端的最后修改时间（Last-Modified）。当浏览器再向服务器端发起这些数据的请求时，会同时把这些数据的最后修改时间通过If-Modified-Since一起传给服务器端，服务器端一旦看到这个头部域，就会先拿这个时间戳和相应资源的最后修改时间比较下，如果相同，就说明这个资源一直以来都没有改动过，于是服务器端就不用再把这个数据重复的传给客户端了，而是直接在响应报文中返回304即可，避免了重复传输带来的带宽消耗。</div><div class="line"></div><div class="line">7 有些同学会感觉疑惑，为什么Last-Modified和If-Modified-Since域都是存储“最后修改时间”的，有啥区别呢。他俩的区别在于，Last-Modified域是响应报文中使用的，由服务器端发给客户端的；而If-Modified-Since则是用在请求报文中的，由客户端发给服务器端的。这两者都是用绝对时间来表示的，所以存在时间同步的问题。那有没有更好的解决办法呢，请继续往下看：）</div><div class="line"></div><div class="line">8 为大家隆重推出Etags和If-None-Match这一对兄弟，他俩的关系和“Last-Modified/If-Modified-Since”的关系一样，Etags（Entity Tags）是用于响应报文中的，而If-None-Match是用于请求报文中的。这对兄弟的好处在于，他们不是以绝对时间来判断数据是否被修改过，而是通过数据的某个属性值来判断，例如数据的MD5值，这样就可以很好的避免时间不同步的问题了。（除了If-None-Match外，请求报文的头部域中还可以用If-Match、If-Range来表示希望获取的Etag值）</div><div class="line"></div><div class="line">9 在响应报文中，可以使用Location头部域来实现重定向，比如更换了域名之后。</div><div class="line"></div><div class="line">10 在HTTP协议里，除了Etags/<span class="keyword">if</span>-None-Match，Last-Modified/If-Modified-Since外，还有两对这样的兄弟，其一是Server/User-Agent，Server是服务器端用来亮明身份的，而User-Agent是客户端用来亮明身份的；另一对是Set-Cookie和Cookie，Set-Cookie用于服务器端向客户端设置cookie的，而Cookie则是客户端告诉服务器端自己的cookie的。</div><div class="line"></div><div class="line">11 在响应报文中，服务器端可以使用Expires域来告诉客户端最多缓存这个数据到什么时间，如果超过这个时间点的话，客户端就不要再缓存这个数据了，而是向服务器端重新发起新的请求。</div><div class="line"></div><div class="line">12 在响应报文中，服务器端可以使用Set-Cookie头部域向客户端设置cookie。其语法很简单，就是由多个name=value组成的，由分号间隔。例如：</div><div class="line"></div><div class="line">Set-Cookie: ASPSESSIONIDQAQBQQQB=BEJCDGKADEDJKLKKAJEOIMMH; path=/</div><div class="line"></div><div class="line">13 在响应报文中，X-Powered-By头部域表示服务器端使用到的技术名称，例如X-Powered-By: ASP.NET</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      
+        
+	<div id="comment">
+	
+	<!-- 多说评论框 start -->
+	 <div class="ds-thread" data-thread-key="/2015/05/06/HTTP学习笔记/" data-title="HTTP学习笔记" data-url="https://niniyang.github.io/2015/05/06/HTTP学习笔记/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"niniY"};
+	  (function() {
+	    var ds = document.createElement('script');
+	    ds.type = 'text/javascript';ds.async = true;
+	    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+	    ds.charset = 'UTF-8';
+	    (document.getElementsByTagName('head')[0] 
+	     || document.getElementsByTagName('body')[0]).appendChild(ds);
+	  })();
+	  </script>
+	<!-- 多说公共JS代码 end -->
+	
+	</div>
+
+
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTTP/">HTTP</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/协议/">协议</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2015/04/26/虚拟机中ubuntu设置分辨率/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">虚拟机中ubuntu设置分辨率</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">Contents</strong>
+    
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关于HTTP"><span class="nav-number">2.</span> <span class="nav-text">关于HTTP</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#重温一下大学学过的差不多已经忘记的一点概念"><span class="nav-number">2.1.</span> <span class="nav-text">重温一下大学学过的差不多已经忘记的一点概念 = =|||</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#概念（来自百度百科）"><span class="nav-number">2.2.</span> <span class="nav-text">概念（来自百度百科）</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#how-it-works？"><span class="nav-number">2.3.</span> <span class="nav-text">how it works？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL"><span class="nav-number">2.4.</span> <span class="nav-text">URL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#报文格式"><span class="nav-number">2.5.</span> <span class="nav-text">报文格式</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP请求报文方法"><span class="nav-number">2.6.</span> <span class="nav-text">HTTP请求报文方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP状态码"><span class="nav-number">2.7.</span> <span class="nav-text">HTTP状态码</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP版本"><span class="nav-number">2.8.</span> <span class="nav-text">HTTP版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#一些高级用法mark（copy-from-http-roclinux-cn-p-3450）"><span class="nav-number">2.9.</span> <span class="nav-text">一些高级用法mark（copy from http://roclinux.cn/?p=3450）</span></a></li></ol></li></ol>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      
+      <footer id="footer">
+  
+
+  <div class="container">
+      	<div class="row">
+	      <p> Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="https://github.com/iTimeTraveler/hexo-theme-hiker" target="_blank">Hexo-theme-hiker</a> </p>
+	      <p id="copyRightEn">Copyright &copy; 2013 - 2017 (ˇˍˇ) ～ All Rights Reserved.</p>
+	      
+	      
+    		<p class="busuanzi_uv">
+				<span id=""> (´▽`)ﾉ    </span> |  
+				<span id="">   (ﾟ▽ﾟ*)  </span>
+		    </p>
+  		   
+		</div>
+
+		
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var wrapdiv = document.getElementById("wrap");
+    var contentdiv = document.getElementById("content");
+    var allheader = document.getElementById("allheader");
+
+    wrapdiv.style.minHeight = document.body.offsetHeight + "px";
+    if (allheader != null) {
+      contentdiv.style.minHeight = document.body.offsetHeight - allheader.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    } else {
+      contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("footer").offsetHeight + "px";
+    }
+</script>
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+<script src="/js/bootstrap.js"></script>
+
+
+
+
+  <script src="/js/dialog.js"></script>
+
+
+
+
+
+
+  </div>
+
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="myModalLabel">设置</h2>
+      </div>
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+
+
+      <div class="modal-body">
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" onclick="javascript:setFontSize();" aria-expanded="true" aria-controls="collapseOne">
+              正文字号大小
+            </a>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+          <div class="panel-body">
+            您已调整页面字体大小
+          </div>
+        </div>
+      
+
+
+          <div style="margin:6px;">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" onclick="javascript:setBackground();" aria-expanded="true" aria-controls="collapseTwo">
+              夜间护眼模式
+            </a>
+        </div>
+          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+          <div class="panel-body">
+            夜间模式已经开启，再次单击按钮即可关闭 
+          </div>
+        </div>
+
+        <div>
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;关 于&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+        </div>
+         <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+          <div class="panel-body">
+            (ˇˍˇ) ～
+          </div>
+          <div class="panel-body">
+            Copyright © 2017 niniY All Rights Reserved.
+          </div>
+        </div>
+      </div>
+
+
+      <hr style="margin-top:0px; margin-bottom:0px; width:80%; border-top: 1px solid #000;">
+      <hr style="margin-top:2px; margin-bottom:0px; width:80%; border-top: 3px solid #000;">
+      <div class="modal-footer">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+      </div>
+    </div>
+  </div>
+</div>
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+  
+
+	<div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+</body>
+</html>

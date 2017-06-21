@@ -17,21 +17,21 @@
   
     <meta name="360-site-verification" content="true" />
   
-  <meta name="description" content="前言刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。 自定义分辨率1.输入：$ cvt 1600 900 返回结果如图：">
+  <meta name="description" content="前言刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。 自定义分辨率（以1600x900为例） 输入：$ cvt 1600 900返回结果如图：">
 <meta name="keywords" content="ubuntu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="虚拟机中ubuntu设置分辨率">
 <meta property="og:url" content="https://niniyang.github.io/2015/04/26/虚拟机中ubuntu设置分辨率/index.html">
 <meta property="og:site_name" content="(ˇˍˇ) ～">
-<meta property="og:description" content="前言刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。 自定义分辨率1.输入：$ cvt 1600 900 返回结果如图：">
+<meta property="og:description" content="前言刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。 自定义分辨率（以1600x900为例） 输入：$ cvt 1600 900返回结果如图：">
 <meta property="og:image" content="https://niniyang.github.io/images/1.png">
 <meta property="og:image" content="https://niniyang.github.io/images/2.png">
 <meta property="og:image" content="https://niniyang.github.io/images/3.png">
 <meta property="og:image" content="https://niniyang.github.io/images/4.png">
-<meta property="og:updated_time" content="2017-06-21T08:50:39.337Z">
+<meta property="og:updated_time" content="2017-06-21T08:55:48.078Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="虚拟机中ubuntu设置分辨率">
-<meta name="twitter:description" content="前言刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。 自定义分辨率1.输入：$ cvt 1600 900 返回结果如图：">
+<meta name="twitter:description" content="前言刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。 自定义分辨率（以1600x900为例） 输入：$ cvt 1600 900返回结果如图：">
 <meta name="twitter:image" content="https://niniyang.github.io/images/1.png">
   
     <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
@@ -189,22 +189,21 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>刚装完ubuntu虚拟机系统的分辨率小的有点…让人难受，想要调整成自己想要的分辨率，而ubuntu里面又没有。</p>
-<h3 id="自定义分辨率"><a href="#自定义分辨率" class="headerlink" title="自定义分辨率"></a>自定义分辨率</h3><p>1.输入：$ cvt 1600 900</p>
-<p>返回结果如图：</p>
-<p><img src="/images/1.png" alt=""><br><a id="more"></a><br>2.查看显示器名称<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输入：$ xrandr</div></pre></td></tr></table></figure></p>
+<h3 id="自定义分辨率"><a href="#自定义分辨率" class="headerlink" title="自定义分辨率"></a>自定义分辨率</h3><p>（以1600x900为例）</p>
+<h4 id="输入：-cvt-1600-900"><a href="#输入：-cvt-1600-900" class="headerlink" title="输入：$ cvt 1600 900"></a>输入：$ cvt 1600 900</h4><p>返回结果如图：</p>
+<p><img src="/images/1.png" alt=""><br><a id="more"></a></p>
+<h4 id="查看显示器名称"><a href="#查看显示器名称" class="headerlink" title="查看显示器名称"></a>查看显示器名称</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输入：$ xrandr</div></pre></td></tr></table></figure>
 <p>如图：</p>
 <p><img src="/images/2.png" alt=""></p>
 <p>以上，看到显示器名称：Virtual1。</p>
-<p>3.设置分辨率</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo xrandr --newmode <span class="string">"1600x900_60.00"</span> 118.25 1600 1696 1856 2112 900 903 908 934 -hsync +vsync</div><div class="line">注：想要设置的分辨率不一样，这条命令后面的数据也随着改变（对应第一条命令返回的结果）</div><div class="line"></div><div class="line">$ sudo xrandr --addmode Virtual1 <span class="string">"1600x900_60.00"</span></div></pre></td></tr></table></figure>
-<p>4.设置1600x900分辨率<br>系统设置-&gt;显示-&gt;分辨率（选择1600x900）-&gt;应用<br>如下图：</p>
+<h4 id="添加分辨率"><a href="#添加分辨率" class="headerlink" title="添加分辨率"></a>添加分辨率</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">$ sudo xrandr --newmode <span class="string">"1600x900_60.00"</span> 118.25 1600 1696 1856 2112 900 903 908 934 -hsync +vsync</div><div class="line">注：想要设置的分辨率不一样，这条命令后面的数据也随着改变（对应第一条命令返回的结果）</div><div class="line"></div><div class="line">$ sudo xrandr --addmode Virtual1 <span class="string">"1600x900_60.00"</span></div></pre></td></tr></table></figure>
+<h4 id="设置1600x900分辨率"><a href="#设置1600x900分辨率" class="headerlink" title="设置1600x900分辨率"></a>设置1600x900分辨率</h4><p>系统设置-&gt;显示-&gt;分辨率（选择1600x900）-&gt;应用<br>如下图：</p>
 <p><img src="/images/3.png" alt=""></p>
-<p>5.保存分辨率<br>重启后，以上分辨率又会失效，保存一下上面两个命令。</p>
+<h4 id="保存分辨率"><a href="#保存分辨率" class="headerlink" title="保存分辨率"></a>保存分辨率</h4><p>重启后，以上分辨率又会失效，保存一下上面两个命令。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">输入：$ sudo gedit /etc/profile</div></pre></td></tr></table></figure>
 <p>文章末尾加上上面两条命令，保存。<br>如图：</p>
 <p><img src="/images/4.png" alt=""></p>
-<p>6.restart and over… ^_^</p>
-
+<h4 id="restart-and-over…"><a href="#restart-and-over…" class="headerlink" title="restart and over… ^_^"></a>restart and over… ^_^</h4>
       
     </div>
     <footer class="article-footer">
@@ -268,7 +267,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义分辨率"><span class="nav-number">2.</span> <span class="nav-text">自定义分辨率</span></a></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义分辨率"><span class="nav-number">2.</span> <span class="nav-text">自定义分辨率</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#输入：-cvt-1600-900"><span class="nav-number">2.1.</span> <span class="nav-text">输入：$ cvt 1600 900</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看显示器名称"><span class="nav-number">2.2.</span> <span class="nav-text">查看显示器名称</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加分辨率"><span class="nav-number">2.3.</span> <span class="nav-text">添加分辨率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置1600x900分辨率"><span class="nav-number">2.4.</span> <span class="nav-text">设置1600x900分辨率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#保存分辨率"><span class="nav-number">2.5.</span> <span class="nav-text">保存分辨率</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#restart-and-over…"><span class="nav-number">2.6.</span> <span class="nav-text">restart and over… ^_^</span></a></li></ol></li></ol>
     
     </div>
   </aside>

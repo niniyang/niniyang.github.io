@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   
-  <title>hexo配置详细说明 | (ˇˍˇ) ～</title>
+  <title>uri、url、urn的区别 | (ˇˍˇ) ～</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="hexo" />
+  <meta name="keywords" content="URL&URI&URN" />
   
   
     <meta name="google-site-verification" content="true" />
@@ -17,17 +17,19 @@
   
     <meta name="360-site-verification" content="true" />
   
-  <meta name="description" content="describe _config.yml">
-<meta name="keywords" content="hexo">
+  <meta name="description" content="前言对URI、URL、URN一直感到很懵，今天各种搜索学习了下，特此记录。 英文版区别 https://danielmiessler.com/study/url-uri/概念 https://en.wikipedia.org/wiki/Uniform_Resource_Identifier 先上一张关系图">
+<meta name="keywords" content="URL&amp;URI&amp;URN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="hexo配置详细说明">
-<meta property="og:url" content="https://niniyang.github.io/2014/04/26/config-yml-zh/index.html">
+<meta property="og:title" content="URI、URL、URN的区别">
+<meta property="og:url" content="https://niniyang.github.io/2015/07/06/URI、URL、URN的区别/index.html">
 <meta property="og:site_name" content="(ˇˍˇ) ～">
-<meta property="og:description" content="describe _config.yml">
-<meta property="og:updated_time" content="2017-06-19T09:15:19.031Z">
+<meta property="og:description" content="前言对URI、URL、URN一直感到很懵，今天各种搜索学习了下，特此记录。 英文版区别 https://danielmiessler.com/study/url-uri/概念 https://en.wikipedia.org/wiki/Uniform_Resource_Identifier 先上一张关系图">
+<meta property="og:image" content="https://niniyang.github.io/images/difference.png">
+<meta property="og:updated_time" content="2017-06-22T03:08:27.865Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="hexo配置详细说明">
-<meta name="twitter:description" content="describe _config.yml">
+<meta name="twitter:title" content="URI、URL、URN的区别">
+<meta name="twitter:description" content="前言对URI、URL、URN一直感到很懵，今天各种搜索学习了下，特此记录。 英文版区别 https://danielmiessler.com/study/url-uri/概念 https://en.wikipedia.org/wiki/Uniform_Resource_Identifier 先上一张关系图">
+<meta name="twitter:image" content="https://niniyang.github.io/images/difference.png">
   
     <link rel="alternate" href="/atom.xml" title="(ˇˍˇ) ～" type="application/atom+xml">
   
@@ -157,7 +159,7 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-config-yml-zh" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-URI、URL、URN的区别" style="width: 75%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="article-inner">
     
     
@@ -165,7 +167,7 @@
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      hexo配置详细说明
+      URI、URL、URN的区别
     </h1>
   
 
@@ -173,26 +175,38 @@
     
     <div class="article-meta">
       
-	<a href="/2014/04/26/config-yml-zh/" class="article-date">
-	  <time datetime="2014-04-26T08:17:16.000Z" itemprop="datePublished">2014-04-26</time>
+	<a href="/2015/07/06/URI、URL、URN的区别/" class="article-date">
+	  <time datetime="2015-07-06T08:17:16.000Z" itemprop="datePublished">2015-07-06</time>
 	</a>
 
       
-    <a class="article-category-link" href="/categories/配置/">配置</a>
+    <a class="article-category-link" href="/categories/URL-URI-URN/">URL&URI&URN</a>
 
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="describe-config-yml"><a href="#describe-config-yml" class="headerlink" title="describe _config.yml"></a>describe _config.yml</h3><a id="more"></a>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="comment"># Hexo Configuration</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/configuration.html</span></div><div class="line"><span class="comment">## Source: https://github.com/hexojs/hexo/</span></div><div class="line"></div><div class="line"><span class="comment"># Site</span></div><div class="line">title: (ˇˍˇ) ～</div><div class="line">subtitle:</div><div class="line">description: noting...</div><div class="line">author: niniY</div><div class="line">language: en</div><div class="line">timezone:</div><div class="line"></div><div class="line"><span class="comment"># URL</span></div><div class="line"><span class="comment">## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'</span></div><div class="line">url: https://niniyang.github.io/</div><div class="line">root: /</div><div class="line">permalink: :year/:month/:day/:title/</div><div class="line">permalink_defaults:</div><div class="line"></div><div class="line"><span class="comment"># Directory</span></div><div class="line">source_dir: <span class="built_in">source</span></div><div class="line">public_dir: public</div><div class="line">tag_dir: tags</div><div class="line">archive_dir: archives</div><div class="line">category_dir: categories</div><div class="line">code_dir: downloads/code</div><div class="line">i18n_dir: :lang</div><div class="line">skip_render:</div><div class="line"></div><div class="line"><span class="comment"># Writing</span></div><div class="line">new_post_name: :title.md <span class="comment"># File name of new posts</span></div><div class="line">default_layout: post</div><div class="line">titlecase: <span class="literal">false</span> <span class="comment"># Transform title into titlecase</span></div><div class="line">external_link: <span class="literal">true</span> <span class="comment"># Open external links in new tab</span></div><div class="line">filename_case: 0</div><div class="line">render_drafts: <span class="literal">false</span></div><div class="line">post_asset_folder: <span class="literal">false</span></div><div class="line">relative_link: <span class="literal">false</span></div><div class="line">future: <span class="literal">true</span></div><div class="line">highlight:</div><div class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></div><div class="line">  line_number: <span class="literal">true</span></div><div class="line">  auto_detect: <span class="literal">false</span></div><div class="line">  tab_replace:</div><div class="line"></div><div class="line"><span class="comment"># Category &amp; Tag</span></div><div class="line">default_category: uncategorized</div><div class="line">category_map: 1,2,3,4</div><div class="line">tag_map: 5,6,7,8</div><div class="line"></div><div class="line"><span class="comment"># Date / Time format</span></div><div class="line"><span class="comment">## Hexo uses Moment.js to parse and display date</span></div><div class="line"><span class="comment">## You can customize the date format as defined in</span></div><div class="line"><span class="comment">## http://momentjs.com/docs/#/displaying/format/</span></div><div class="line">date_format: YYYY-MM-DD</div><div class="line">time_format: HH:mm:ss</div><div class="line"></div><div class="line"><span class="comment"># Pagination</span></div><div class="line"><span class="comment">## Set per_page to 0 to disable pagination</span></div><div class="line">per_page: 10</div><div class="line">pagination_dir: page</div><div class="line"></div><div class="line"><span class="comment"># Extensions</span></div><div class="line"><span class="comment">## Plugins: https://hexo.io/plugins/</span></div><div class="line"><span class="comment">## Themes: https://hexo.io/themes/</span></div><div class="line">theme: hiker</div><div class="line"></div><div class="line"><span class="comment"># Deployment</span></div><div class="line"><span class="comment">## Docs: https://hexo.io/docs/deployment.html</span></div><div class="line">deploy:</div><div class="line">  <span class="built_in">type</span>: git</div><div class="line">  repository: git@github.com:niniyang/niniyang.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure>
-<h4 id="在执行-hexo-deploy-后-出现-error-deployer-not-found-github错误，原因可能如下："><a href="#在执行-hexo-deploy-后-出现-error-deployer-not-found-github错误，原因可能如下：" class="headerlink" title="在执行 hexo deploy 后,出现 error deployer not found:github错误，原因可能如下："></a>在执行 hexo deploy 后,出现 error deployer not found:github错误，原因可能如下：</h4><ol>
-<li>hexo 更新到3.0之后，deploy的type 的github需要改成git</li>
-<li>npm install hexo-deployer-git –save 改了之后执行</li>
-</ol>
-<h4 id="修改footer显示的内容："><a href="#修改footer显示的内容：" class="headerlink" title="修改footer显示的内容："></a>修改footer显示的内容：</h4><ol>
-<li>不同主题配置不大一样，但是大抵相同，如下文件目录进行修改：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/themes/(你的主题)/layout/_partials/footer.***</div></pre></td></tr></table></figure>
+        <h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>对URI、URL、URN一直感到很懵，今天各种搜索学习了下，特此记录。</p>
+<h3 id="英文版"><a href="#英文版" class="headerlink" title="英文版"></a>英文版</h3><p>区别 <a href="https://danielmiessler.com/study/url-uri/" target="_blank" rel="external">https://danielmiessler.com/study/url-uri/</a><br>概念 <a href="https://en.wikipedia.org/wiki/Uniform_Resource_Identifier" target="_blank" rel="external">https://en.wikipedia.org/wiki/Uniform_Resource_Identifier</a></p>
+<h3 id="先上一张关系图"><a href="#先上一张关系图" class="headerlink" title="先上一张关系图"></a>先上一张关系图</h3><p><img src="/images/difference.png" alt=""><br><a id="more"></a></p>
+<h4 id="URI"><a href="#URI" class="headerlink" title="URI"></a>URI</h4><p>(Uniform Resource Identifier 的缩写，统一资源标识符)（代表一种标准），用来唯一的标识一个资源。</p>
+<h4 id="URN"><a href="#URN" class="headerlink" title="URN"></a>URN</h4><p>uniform resource name，统一资源命名，是通过名字来标识资源</p>
+<h4 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h4><p>(Uniform/Universal Resource Locator 的缩写，统一资源定位符)，它是一种具体的URI，即URL可以用来标识一个资源，而且还指明了如何locate这个资源。</p>
+<h5 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h5><p>端口(Port)，相当于一种数据的传输通道。用于接受某些数据，然后传输给相应的服务，而电脑将这些数据处理后，再将相应的回复通过开启的端口传给对方。</p>
+<p>端口的作用：因为 IP 地址与网络服务的关系是一对多的关系。所以实际上因特网上是通过 IP 地址加上端口号来区分不同的服务的。</p>
+<p>端口是通过端口号来标记的，端口号只有整数，范围是从0 到65535。</p>
+<h5 id="URL标准格式"><a href="#URL标准格式" class="headerlink" title="URL标准格式"></a>URL标准格式</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">scheme://host[:port<span class="comment">#]/path/.../[;url-params][?query-string][#anchor]</span></div><div class="line"></div><div class="line">scheme //有我们很熟悉的http、https、ftp以及著名的ed2k，迅雷的thunder等。</div><div class="line">host   //HTTP服务器的IP地址或者域名</div><div class="line">port  //HTTP服务器的默认端口是80，这种情况下端口号可以省略。如果使用了别的端口，必须指明，例如tomcat的默认端口是8080 http://localhost:8080/</div><div class="line">path   //访问资源的路径</div><div class="line">url-params  //所带参数 </div><div class="line">query-string    //发送给http服务器的数据</div><div class="line">anchor //锚点定位</div></pre></td></tr></table></figure>
+<h3 id="SUMMARY"><a href="#SUMMARY" class="headerlink" title="SUMMARY"></a>SUMMARY</h3><p>copy from this <a href="http://www.cnblogs.com/hust-ghtao/p/4724885.html" target="_blank" rel="external">blog</a></p>
+<p>“A URI 可以进一步被分为定位符、名字或两者都是. 术语“Uniform Resource Locator” (URL) 是URI的子集, 除了确定一个资源,还提供一种定位该资源的主要访问机制(如其网络“位置”)。”</p>
+<p>“URI可以分为URL,URN或同时具备locators 和names特性的一个东西。URN作用就好像一个人的名字，URL就像一个人的地址。换句话说：URN确定了东西的身份，URL提供了找到它的方式。”</p>
+<p>URI是以一种抽象的，高层次概念定义统一资源标识，而URL和URN则是具体的资源标识的方式。</p>
+<p>首先，URL、URN是URI的一种（通过那个图就看的出来吧）。但也不是所有的URI都是URL。<br>让URI能成为URL：“访问机制”，“网络位置”。e.g. http:// or ftp://.。<br>URN是唯一标识的一部分，就是一个特殊的名字。</p>
+<p>下面就来看看例子吧，当来也是来自权威的RFC：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">ftp://ftp.is.co.za/rfc/rfc1808.txt (also a URL because of the protocol)</div><div class="line">http://www.ietf.org/rfc/rfc2396.txt (also a URL because of the protocol)</div><div class="line">ldap://[2001:db8::7]/c=GB?objectClass?one (also a URL because of the protocol)</div><div class="line">mailto:John.Doe@example.com (also a URL because of the protocol)</div><div class="line">news:comp.infosystems.www.servers.unix (also a URL because of the protocol)</div><div class="line">tel:+1-816-555-1212</div><div class="line">telnet://192.0.2.16:80/ (also a URL because of the protocol)</div><div class="line">urn:oasis:names:specification:docbook:dtd:xml:4.1.2</div></pre></td></tr></table></figure></p>
+<p>这些全都是URI, 其中有些是URL。 哪些? 就是那些提供了访问机制的。</p>
+<p>总结</p>
+<p>下面到了回答问题的时候了：<br>当我们替代web地址的时候，URI和URL那个更准确？<br>基于我读的很多的文章，包括RFC，我想说URI更准确。<br>别急，我有我的理由：<br>我们经常使用的URI不是严格技术意义上的URL。例如：你需要的文件在files.hp.com. 这是URI，但不是URL–系统可能会对很多协议和端口都做出正确的反应。<br>你去<a href="http://files.hp.com" target="_blank" rel="external">http://files.hp.com</a> 和ftp://files.hp.com.可能得到完全不同的内容。这种情况可能更加普遍，想想不同谷歌域名上的不同服务啊。</p>
+<font face="微软雅黑" color="Salmon">所以，用URI吧，这样你通常技术上是正确的，URL可不一定。最后“URL”这个术语正在被弃用。所以明智吧少年！</font>
+
+
 
       
     </div>
@@ -202,7 +216,7 @@
 	<div id="comment">
 	
 	<!-- 多说评论框 start -->
-	 <div class="ds-thread" data-thread-key="/2014/04/26/config-yml-zh/" data-title="hexo配置详细说明" data-url="https://niniyang.github.io/2014/04/26/config-yml-zh/"></div>
+	 <div class="ds-thread" data-thread-key="/2015/07/06/URI、URL、URN的区别/" data-title="URI、URL、URN的区别" data-url="https://niniyang.github.io/2015/07/06/URI、URL、URN的区别/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -223,7 +237,7 @@
 
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/URL-URI-URN/">URL&URI&URN</a></li></ul>
 
     </footer>
   </div>
@@ -231,19 +245,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2014/04/26/config-yml-theme-zh/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          hexo主题配置详细说明
-        
-      </div>
-    </a>
   
-  
-    <a href="/2014/04/25/Hexo theme config/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2015/06/16/网站收集/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hexo主题配置</div>
+      <div class="article-nav-title">网站收集</div>
     </a>
   
 </nav>
@@ -257,7 +262,7 @@
     <div id="toc" class="toc-article">
     <strong class="toc-title">Contents</strong>
     
-        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#describe-config-yml"><span class="nav-number">1.</span> <span class="nav-text">describe _config.yml</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#在执行-hexo-deploy-后-出现-error-deployer-not-found-github错误，原因可能如下："><span class="nav-number">1.1.</span> <span class="nav-text">在执行 hexo deploy 后,出现 error deployer not found:github错误，原因可能如下：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#修改footer显示的内容："><span class="nav-number">1.2.</span> <span class="nav-text">修改footer显示的内容：</span></a></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#英文版"><span class="nav-number">2.</span> <span class="nav-text">英文版</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#先上一张关系图"><span class="nav-number">3.</span> <span class="nav-text">先上一张关系图</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#URI"><span class="nav-number">3.1.</span> <span class="nav-text">URI</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URN"><span class="nav-number">3.2.</span> <span class="nav-text">URN</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#URL"><span class="nav-number">3.3.</span> <span class="nav-text">URL</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#端口"><span class="nav-number">3.3.1.</span> <span class="nav-text">端口</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#URL标准格式"><span class="nav-number">3.3.2.</span> <span class="nav-text">URL标准格式</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#SUMMARY"><span class="nav-number">4.</span> <span class="nav-text">SUMMARY</span></a></li></ol>
     
     </div>
   </aside>
